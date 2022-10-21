@@ -36,12 +36,12 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="272dp"
-        android:layout_height="47dp"
+        android:layout_width="274dp"
+        android:layout_height="53dp"
         android:text="LOG IN"
         app:backgroundTint="#FB8500"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="342dp" />
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="339dp" />
 
     <TextView
         android:id="@+id/Page_title"
@@ -52,7 +52,7 @@
         android:textColor="#FFB703"
         android:textSize="34sp"
         tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="102dp" />
+        tools:layout_editor_absoluteY="98dp" />
 
     <EditText
         android:id="@+id/Email_input"
@@ -62,7 +62,7 @@
         android:fontFamily="@font/jomhuria"
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="26sp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="168dp" />
@@ -75,7 +75,9 @@
         android:fontFamily="@font/jomhuria"
         android:hint="Enter Password"
         android:inputType="textPassword"
+        android:textColor="@color/white"
         android:textSize="26sp"
+        android:typeface="normal"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="245dp" />
 
