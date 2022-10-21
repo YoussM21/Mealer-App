@@ -7,6 +7,30 @@
     android:background="#5B8CA3">
 
 
+    <TextView
+        android:id="@+id/login2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="LOG IN"
+        android:textColor="#FB8500"
+        android:textSize="32sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="628dp" />
+
+    <TextView
+        android:id="@+id/login_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="Have an account?  "
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="628dp" />
+
     <EditText
         android:id="@+id/LastName"
         android:layout_width="173dp"
@@ -54,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jomhuria"
-        android:text="COOK"
+        android:text="CLIENT"
         android:textColor="#FFB703"
         android:textSize="40sp"
         tools:ignore="MissingConstraints"
@@ -114,38 +138,13 @@
         tools:layout_editor_absoluteX="17dp"
         tools:layout_editor_absoluteY="417dp" />
 
-    <EditText
-        android:id="@+id/DescriptionID"
-        android:layout_width="378dp"
-        android:layout_height="51dp"
-        android:ems="10"
-        android:fontFamily="@font/jomhuria"
-        android:gravity="start|top"
-        android:hint="Description"
-        android:inputType="textMultiLine"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="488dp" />
-
-    <TextView
-        android:id="@+id/View_cheque"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jomhuria"
-        android:text="Void Cheque Picture"
-        android:textColor="@color/common_google_signin_btn_text_light_focused"
-        android:textSize="26sp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="554dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="80dp"
-        android:layout_height="69dp"
-        android:background="@color/cardview_shadow_end_color"
-        app:srcCompat="@android:drawable/ic_menu_upload"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="594dp" />
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="274dp"
+        android:layout_height="53dp"
+        android:text="NEXT"
+        app:backgroundTint="#FB8500"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="498dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
