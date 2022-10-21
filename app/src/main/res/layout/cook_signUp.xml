@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B8CA3">
+
+
+    <EditText
+        android:id="@+id/LastName"
+        android:layout_width="173dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="187dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="627dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/Logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/cook_title"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:fontFamily="@font/jomhuria"
+        android:text="I'm a "
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="117dp" />
+
+    <TextView
+        android:id="@+id/cook_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="Cook"
+        android:textColor="#FFB703"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="117dp" />
+
+    <EditText
+        android:id="@+id/FirstName"
+        android:layout_width="173dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <EditText
+        android:id="@+id/EmailAddress"
+        android:layout_width="379dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="Enter Email Address"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <EditText
+        android:id="@+id/PasswordID"
+        android:layout_width="378dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="355dp" />
+
+    <EditText
+        android:id="@+id/AddressID"
+        android:layout_width="377dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint=" Enter Address"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="417dp" />
+
+    <EditText
+        android:id="@+id/DescriptionID"
+        android:layout_width="378dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:gravity="start|top"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="488dp" />
+
+    <TextView
+        android:id="@+id/View_cheque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="Void Cheque Picture"
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="554dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="80dp"
+        android:layout_height="69dp"
+        android:background="@color/cardview_shadow_end_color"
+        app:srcCompat="@android:drawable/ic_menu_upload"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="594dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
