@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B8CA3">
+
+
+    <Button
+        android:id="@+id/signUp_button"
+        android:layout_width="238dp"
+        android:layout_height="54dp"
+        android:text="@string/sign_up"
+        app:backgroundTint="#FB8500"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="623dp" />
+
+    <EditText
+        android:id="@+id/CardNumber"
+        android:layout_width="336dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="@string/card_number"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="464dp"
+        tools:ignore="MissingConstraints,TextFields"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="187dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="627dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/Logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/cook_title"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:fontFamily="@font/jomhuria"
+        android:text="I'm a "
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/cook_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="CLIENT"
+        android:textColor="#FFB703"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cardDisplay"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="211dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/CardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="Your card details are securely saved for stress-free payments"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="171dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/CardName"
+        android:layout_width="336dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="Name on Card"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="399dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/EXPdate"
+        android:layout_width="157dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="EXP. Date"
+        android:inputType="date"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="530dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/CVV_value"
+        android:layout_width="159dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="CVV"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteY="530dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
