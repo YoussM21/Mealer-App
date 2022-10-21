@@ -16,5 +16,4 @@ public class Account {
         this.address = address;
     }
 
-
 }
