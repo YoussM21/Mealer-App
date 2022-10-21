@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#023047"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247"
+        app:srcCompat="@drawable/Logo" />
+
+    <ImageView
+        android:id="@+id/food_icons"
+        android:layout_width="0dp"
+        android:layout_height="729dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/food_icons"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="238dp"
+        android:layout_height="54dp"
+        android:text="LOG OUT"
+        app:backgroundTint="#FB8500"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+    <TextView
+        android:id="@+id/Loggedin_as..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="You’re Logged in as"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:typeface="normal"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <TextView
+        android:id="@+id/identity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="COOK"
+        android:textColor="#FFB703"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="269dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
