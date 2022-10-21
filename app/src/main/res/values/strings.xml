@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Mealer</string>
     <string name="app_logo" />
+    <string name="have_an_account">Have an account?</string>
+    <string name="log_in">LOG IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="card_number">Card Number</string>
 </resources>

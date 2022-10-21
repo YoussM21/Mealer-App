@@ -41,7 +41,8 @@
         android:text="LOG IN"
         app:backgroundTint="#FB8500"
         tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="339dp" />
+        tools:layout_editor_absoluteY="339dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Page_title"
@@ -52,7 +53,8 @@
         android:textColor="#FFB703"
         android:textSize="34sp"
         tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="98dp" />
+        tools:layout_editor_absoluteY="98dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/Email_input"
@@ -65,7 +67,8 @@
         android:textColor="@color/white"
         android:textSize="26sp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="168dp" />
+        tools:layout_editor_absoluteY="168dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/Password_input"
@@ -79,6 +82,7 @@
         android:textSize="26sp"
         android:typeface="normal"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="245dp" />
+        tools:layout_editor_absoluteY="245dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
