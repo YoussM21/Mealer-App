@@ -78,25 +78,30 @@
         android:text="LOG IN"
         android:textColor="#FB8500"
         android:textSize="32sp"
+        android:onClick="sendMessage"
         tools:layout_editor_absoluteX="243dp"
         tools:layout_editor_absoluteY="386dp"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/cookButton"
         android:layout_width="100dp"
         android:layout_height="91dp"
         android:background="@color/cardview_shadow_end_color"
+        android:text="@string/cookButton"
+        android:onClick="sendMessage"
         app:srcCompat="@drawable/Chef"
         tools:layout_editor_absoluteX="48dp"
         tools:layout_editor_absoluteY="183dp"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/ClientButton"
         android:layout_width="112dp"
         android:layout_height="99dp"
         android:background="@color/cardview_shadow_end_color"
+        android:text="@string/ClientButton"
+        android:onClick="sendMessage"
         app:srcCompat="@drawable/image2"
         tools:layout_editor_absoluteX="243dp"
         tools:layout_editor_absoluteY="175dp"
