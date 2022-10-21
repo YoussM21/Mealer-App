@@ -7,19 +7,29 @@
     android:background="#5B8CA3">
 
 
-    <EditText
-        android:id="@+id/LastName"
-        android:layout_width="173dp"
-        android:layout_height="52dp"
-        android:ems="10"
+    <TextView
+        android:id="@+id/login_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/jomhuria"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
+        android:text="@string/have_an_account"
         android:textColor="@color/white"
         android:textSize="26sp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="210dp" />
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="677dp" />
+
+    <TextView
+        android:id="@+id/login2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jomhuria"
+        android:text="@string/log_in"
+        android:textColor="#FB8500"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="677dp" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -37,6 +47,34 @@
         app:srcCompat="@drawable/Logo"
         tools:ignore="ContentDescription" />
 
+    <EditText
+        android:id="@+id/EmailAddress"
+        android:layout_width="379dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="Enter Email Address"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="262dp" />
+
+    <EditText
+        android:id="@+id/LastName"
+        android:layout_width="173dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="189dp" />
+
     <TextView
         android:id="@+id/cook_title"
         android:layout_width="53dp"
@@ -47,7 +85,7 @@
         android:textSize="40sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="117dp" />
+        tools:layout_editor_absoluteY="96dp" />
 
     <TextView
         android:id="@+id/cook_value"
@@ -59,7 +97,7 @@
         android:textSize="40sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="117dp" />
+        tools:layout_editor_absoluteY="96dp" />
 
     <EditText
         android:id="@+id/FirstName"
@@ -73,33 +111,7 @@
         android:textSize="26sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="210dp" />
-
-    <EditText
-        android:id="@+id/EmailAddress"
-        android:layout_width="379dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:fontFamily="@font/jomhuria"
-        android:hint="Enter Email Address"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="283dp" />
-
-    <EditText
-        android:id="@+id/PasswordID"
-        android:layout_width="378dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:fontFamily="@font/jomhuria"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="355dp" />
+        tools:layout_editor_absoluteY="189dp" />
 
     <EditText
         android:id="@+id/AddressID"
@@ -111,8 +123,9 @@
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textSize="26sp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="417dp" />
+        tools:layout_editor_absoluteY="396dp" />
 
     <EditText
         android:id="@+id/DescriptionID"
@@ -125,8 +138,9 @@
         android:inputType="textMultiLine"
         android:textColor="@color/white"
         android:textSize="26sp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="488dp" />
+        tools:layout_editor_absoluteY="467dp" />
 
     <TextView
         android:id="@+id/View_cheque"
@@ -136,16 +150,43 @@
         android:text="Void Cheque Picture"
         android:textColor="@color/common_google_signin_btn_text_light_focused"
         android:textSize="26sp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="554dp" />
+        tools:layout_editor_absoluteY="533dp" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="80dp"
-        android:layout_height="69dp"
+        android:id="@+id/UploadButton"
+        android:layout_width="59dp"
+        android:layout_height="50dp"
         android:background="@color/cardview_shadow_end_color"
+        android:contentDescription="Upload Button"
         app:srcCompat="@android:drawable/ic_menu_upload"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="594dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="565dp" />
+
+    <Button
+        android:id="@+id/SignUp_button"
+        android:layout_width="238dp"
+        android:layout_height="54dp"
+        android:text="SIGN UP"
+        app:backgroundTint="#FB8500"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="623dp" />
+
+    <EditText
+        android:id="@+id/PasswordID"
+        android:layout_width="378dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/jomhuria"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="334dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
