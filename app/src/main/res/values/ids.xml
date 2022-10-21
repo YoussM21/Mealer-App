@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="logo2" type="id" />
+    <item name="rectangle_2" type="id" />
+    <item name="imageView2" type="id" />
+    <item name="cook_role" type="id" />
+    <item name="imageView3" type="id" />
+    <item name="client_role" type="id" />
+    <item name="Login_option" type="id" />
+    <item name="login" type="id" />
+</resources>
