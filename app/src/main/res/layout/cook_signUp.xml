@@ -76,7 +76,7 @@
         tools:layout_editor_absoluteY="189dp" />
 
     <TextView
-        android:id="@+id/cook_title"
+        android:id="@+id/Im_a..."
         android:layout_width="53dp"
         android:layout_height="58dp"
         android:fontFamily="@font/jomhuria"
@@ -88,11 +88,11 @@
         tools:layout_editor_absoluteY="96dp" />
 
     <TextView
-        android:id="@+id/cook_value"
+        android:id="@+id/Identity_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jomhuria"
-        android:text="Cook"
+        android:text="COOK"
         android:textColor="#FFB703"
         android:textSize="40sp"
         tools:ignore="MissingConstraints"
