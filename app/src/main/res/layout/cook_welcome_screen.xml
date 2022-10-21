@@ -39,6 +39,7 @@
         android:layout_width="238dp"
         android:layout_height="54dp"
         android:text="LOG OUT"
+        android:onClick="sendMessage"
         app:backgroundTint="#FB8500"
         tools:layout_editor_absoluteX="86dp"
         tools:layout_editor_absoluteY="509dp"

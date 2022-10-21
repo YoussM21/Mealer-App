@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
+        android:onClick="sendMessage"
         android:textColor="#FB8500"
         android:textSize="32sp"
         tools:ignore="MissingConstraints"
@@ -143,6 +144,7 @@
         android:layout_width="274dp"
         android:layout_height="53dp"
         android:text="NEXT"
+        android:onClick="sendMessage"
         app:backgroundTint="#FB8500"
         tools:layout_editor_absoluteX="68dp"
         tools:layout_editor_absoluteY="498dp" />
