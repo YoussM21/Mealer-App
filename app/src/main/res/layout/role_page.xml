@@ -89,7 +89,8 @@
         android:background="@color/cardview_shadow_end_color"
         app:srcCompat="@drawable/Chef"
         tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="183dp" />
+        tools:layout_editor_absoluteY="183dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -98,6 +99,7 @@
         android:background="@color/cardview_shadow_end_color"
         app:srcCompat="@drawable/image2"
         tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="175dp" />
+        tools:layout_editor_absoluteY="175dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
