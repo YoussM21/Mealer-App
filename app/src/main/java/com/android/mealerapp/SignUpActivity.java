@@ -2,6 +2,7 @@ package com.android.mealerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,7 +26,8 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void onClientClick(){
-
+        Intent intent1 = new Intent(getApplicationContext(), clientSignUpActivity.class);
+        startActivity(intent1);
     }
 
     public void onChefClick(){
