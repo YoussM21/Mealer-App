@@ -5,4 +5,7 @@
     <string name="log_in">LOG IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="card_number">Card Number</string>
+    <string name="cookButton">Cook</string>
+    <string name="clientButton">Client</string>
+    <string name="ClientButton">Client</string>
 </resources>

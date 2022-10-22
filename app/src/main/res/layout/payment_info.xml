@@ -11,27 +11,31 @@
         android:id="@+id/signUp_button"
         android:layout_width="238dp"
         android:layout_height="54dp"
-        android:text="@string/sign_up"
+        android:layout_marginBottom="80dp"
         android:onClick="sendMessage"
+        android:text="@string/sign_up"
         app:backgroundTint="#FB8500"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="623dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/CardNumber"
         android:layout_width="336dp"
         android:layout_height="53dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="@string/card_number"
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="464dp"
-        tools:ignore="MissingConstraints,TextFields"
-        android:autofillHints="" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardName"
+        tools:ignore="MissingConstraints,TextFields" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -46,40 +50,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/Logo"
+        app:srcCompat="@drawable/logo2"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/cook_title"
         android:layout_width="53dp"
         android:layout_height="58dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/jomhuria"
         android:text="I'm a "
         android:textColor="@color/white"
         android:textSize="40sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo2"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/cook_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/jomhuria"
         android:text="CLIENT"
         android:textColor="#FFB703"
         android:textSize="40sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cook_title"
+        app:layout_constraintTop_toBottomOf="@+id/logo2"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cardDisplay"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="211dp"
+        android:layout_width="331dp"
+        android:layout_height="164dp"
+        app:layout_constraintBottom_toTopOf="@+id/CardName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/card_display"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -88,10 +98,15 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/jomhuria"
         android:text="Your card details are securely saved for stress-free payments"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="171dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cook_value"
+        app:layout_constraintVertical_bias="0.476"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -104,36 +119,42 @@
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="399dp"
+        app:layout_constraintBottom_toTopOf="@+id/CardNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/EXPdate"
         android:layout_width="157dp"
         android:layout_height="54dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="EXP. Date"
         android:inputType="date"
         android:textColor="@color/white"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="530dp"
+        app:layout_constraintEnd_toStartOf="@+id/CVV_value"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardNumber"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/CVV_value"
         android:layout_width="159dp"
         android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="CVV"
         android:inputType="number"
         android:textColor="@color/white"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="530dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardNumber"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

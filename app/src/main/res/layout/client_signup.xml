@@ -11,40 +11,49 @@
         android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="72dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
-        android:onClick="sendMessage"
-        android:textColor="#FB8500"
+        android:textColor="#FFEB3B"
         android:textSize="32sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="628dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/login_option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/jomhuria"
         android:text="Have an account?  "
         android:textColor="@color/white"
         android:textSize="32sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="628dp" />
+        app:layout_constraintEnd_toStartOf="@+id/login2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Next"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/LastName"
         android:layout_width="173dp"
         android:layout_height="52dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="Last Name"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FirstName"
+        app:layout_constraintTop_toBottomOf="@+id/Identity_value"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -58,95 +67,115 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/Logo"
+        app:layout_constraintVertical_bias="0.456"
+        app:srcCompat="@drawable/logo2"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/Im_a..."
         android:layout_width="53dp"
         android:layout_height="58dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/jomhuria"
         android:text="I'm a "
         android:textColor="@color/white"
         android:textSize="40sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="117dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo2"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Identity_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/jomhuria"
         android:text="CLIENT"
-        android:textColor="#FFB703"
+        android:textColor="#FFEB3B"
         android:textSize="40sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="117dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Im_a..."
+        app:layout_constraintTop_toBottomOf="@+id/logo2"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/FirstName"
         android:layout_width="173dp"
         android:layout_height="52dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="First Name"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintBottom_toTopOf="@+id/EmailAddress"
+        app:layout_constraintEnd_toStartOf="@+id/LastName"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/EmailAddress"
         android:layout_width="379dp"
         android:layout_height="54dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
+        android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="283dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LastName" />
 
     <EditText
         android:id="@+id/PasswordID"
         android:layout_width="378dp"
         android:layout_height="50dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="@color/white"
+        android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="355dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailAddress" />
 
     <EditText
         android:id="@+id/AddressID"
         android:layout_width="377dp"
         android:layout_height="55dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint=" Enter Address"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordID" />
 
     <Button
         android:id="@+id/Next"
         android:layout_width="274dp"
         android:layout_height="53dp"
+        android:layout_marginTop="44dp"
         android:text="NEXT"
-        android:onClick="sendMessage"
+        android:textColor="#4E342E"
         app:backgroundTint="#FB8500"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="498dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddressID" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
