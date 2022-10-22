@@ -7,6 +7,19 @@
     android:background="#5B8CA3">
 
 
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="411dp"
+        android:layout_height="707dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/rectangle_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/logo2"
         android:layout_width="187dp"
@@ -20,8 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo2"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/logo2" />
 
     <Button
         android:id="@+id/login"
@@ -33,7 +45,6 @@
         android:layout_marginBottom="339dp"
         android:onClick="sendMessage"
         android:text="LOG IN"
-        android:textColor="#4E342E"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +61,7 @@
         android:layout_marginBottom="580dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
-        android:textColor="#FFEB3B"
+        android:textColor="#FFB703"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +81,6 @@
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
-        android:textColorHint="#263238"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +100,6 @@
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="@color/white"
-        android:textColorHint="#263238"
         android:textSize="26sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
