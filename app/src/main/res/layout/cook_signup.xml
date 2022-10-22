@@ -11,18 +11,28 @@
         android:id="@+id/login_option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="677dp"
+        android:layout_marginEnd="187dp"
+        android:layout_marginBottom="14dp"
         android:fontFamily="@font/jomhuria"
         android:text="@string/have_an_account"
         android:textColor="@color/white"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="677dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="677dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="6dp"
         android:fontFamily="@font/jomhuria"
         android:minWidth="48dp"
         android:minHeight="48dp"
@@ -30,9 +40,11 @@
         android:text="@string/log_in"
         android:textColor="#FFEB3B"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="230dp"
-        tools:layout_editor_absoluteY="677dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -41,7 +53,7 @@
         android:layout_marginStart="98dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="98dp"
-        android:layout_marginBottom="627dp"
+        android:layout_marginBottom="648dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +66,10 @@
         android:id="@+id/EmailAddress"
         android:layout_width="379dp"
         android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="415dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="Enter Email Address"
@@ -61,14 +77,20 @@
         android:textColor="@color/white"
         android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="262dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/LastName"
         android:layout_width="173dp"
         android:layout_height="52dp"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="490dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="Last Name"
@@ -76,38 +98,56 @@
         android:textColor="@color/white"
         android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="189dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Im_a..."
         android:layout_width="53dp"
         android:layout_height="58dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="209dp"
+        android:layout_marginBottom="577dp"
         android:fontFamily="@font/jomhuria"
         android:text="I'm a "
         android:textColor="@color/white"
         android:textSize="40sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Identity_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="573dp"
         android:fontFamily="@font/jomhuria"
         android:text="COOK"
         android:textColor="#FFEB3B"
         android:textSize="40sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/FirstName"
         android:layout_width="173dp"
         android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="490dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="First Name"
@@ -115,14 +155,20 @@
         android:textColor="@color/white"
         android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="189dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/AddressID"
         android:layout_width="377dp"
         android:layout_height="55dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="280dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint=" Enter Address"
@@ -130,14 +176,20 @@
         android:textColor="@color/white"
         android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="396dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/DescriptionID"
         android:layout_width="378dp"
         android:layout_height="51dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="467dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="213dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:gravity="start|top"
@@ -146,49 +198,73 @@
         android:textColor="@color/white"
         android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="467dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/View_cheque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="533dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginBottom="158dp"
         android:fontFamily="@font/jomhuria"
         android:text="Void Cheque Picture"
         android:textColor="@color/common_google_signin_btn_text_light_focused"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="533dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/UploadButton"
         android:layout_width="59dp"
         android:layout_height="50dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="565dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="116dp"
         android:background="@color/cardview_shadow_end_color"
         android:contentDescription="Upload Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_upload"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="565dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/SignUp_button"
         android:layout_width="238dp"
         android:layout_height="54dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="623dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="54dp"
         android:onClick="sendMessage"
         android:text="SIGN UP"
         android:textColor="#4E342E"
         app:backgroundTint="#FB8500"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="623dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/PasswordID"
         android:layout_width="378dp"
         android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="334dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="347dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="Enter Password"
@@ -196,8 +272,10 @@
         android:textColor="@color/white"
         android:textColorHint="#263238"
         android:textSize="26sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="334dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

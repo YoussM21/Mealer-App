@@ -11,6 +11,7 @@
         android:id="@+id/signUp_button"
         android:layout_width="238dp"
         android:layout_height="54dp"
+        android:layout_marginTop="597dp"
         android:layout_marginBottom="80dp"
         android:onClick="sendMessage"
         android:text="@string/sign_up"
@@ -19,6 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
