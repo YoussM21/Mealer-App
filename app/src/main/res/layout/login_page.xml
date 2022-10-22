@@ -43,7 +43,7 @@
         android:layout_marginTop="339dp"
         android:layout_marginEnd="69dp"
         android:layout_marginBottom="339dp"
-        android:onClick="sendMessage"
+        android:onClick="on"
         android:text="LOG IN"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
