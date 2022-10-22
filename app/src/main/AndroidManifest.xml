@@ -13,21 +13,28 @@
         android:theme="@style/Theme.Mealer"
         tools:targetApi="31">
         <activity
-            android:name=".cookSignupActivity"
+            android:name=".LogInActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".paymentInfoActivity"
+            android:name=".CookSignupActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".clientSignUpActivity"
+            android:name=".PaymentInfoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ClientSignUpActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

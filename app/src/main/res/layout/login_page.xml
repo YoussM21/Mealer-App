@@ -7,20 +7,6 @@
     android:background="#5B8CA3">
 
 
-    <View
-        android:id="@+id/rectangle_2"
-        android:layout_width="411dp"
-        android:layout_height="707dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="83dp"
-        android:background="@drawable/rectangle_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <ImageView
         android:id="@+id/logo2"
         android:layout_width="187dp"
@@ -47,12 +33,12 @@
         android:layout_marginBottom="339dp"
         android:onClick="sendMessage"
         android:text="LOG IN"
+        android:textColor="#4E342E"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Page_title"
@@ -64,13 +50,12 @@
         android:layout_marginBottom="580dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
-        android:textColor="#FFB703"
+        android:textColor="#FFEB3B"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Email_input"
@@ -85,12 +70,12 @@
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
+        android:textColorHint="#263238"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Password_input"
@@ -105,12 +90,12 @@
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="@color/white"
+        android:textColorHint="#263238"
         android:textSize="26sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
