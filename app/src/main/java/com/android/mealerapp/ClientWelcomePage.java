@@ -1,6 +1,8 @@
 package com.android.mealerapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +14,9 @@ public class ClientWelcomePage extends AppCompatActivity {
         setContentView(R.layout.client_welcome_screen);
     }
 
-
-
+    public void onLogoutClick_1(View view){
+        Intent intent1 = new Intent(getApplicationContext(), rolePage.class);
+        startActivity(intent1);
+    }
 
 }
