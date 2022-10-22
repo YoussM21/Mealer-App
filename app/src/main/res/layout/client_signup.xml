@@ -11,14 +11,18 @@
         android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="269dp"
+        android:layout_marginTop="644dp"
         android:layout_marginEnd="92dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="37dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
         android:textColor="#FFEB3B"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/login_option"
