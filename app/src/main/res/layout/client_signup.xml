@@ -11,15 +11,14 @@
         android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
         android:textColor="#FFEB3B"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/login_option"
@@ -33,8 +32,7 @@
         app:layout_constraintEnd_toStartOf="@+id/login2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Next"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/Next" />
 
     <EditText
         android:id="@+id/LastName"
@@ -52,8 +50,7 @@
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/FirstName"
-        app:layout_constraintTop_toBottomOf="@+id/Identity_value"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/Identity_value" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -68,8 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.456"
-        app:srcCompat="@drawable/logo2"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/logo2" />
 
     <TextView
         android:id="@+id/Im_a..."
@@ -82,8 +78,7 @@
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/logo2" />
 
     <TextView
         android:id="@+id/Identity_value"
@@ -97,8 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Im_a..."
-        app:layout_constraintTop_toBottomOf="@+id/logo2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/logo2" />
 
     <EditText
         android:id="@+id/FirstName"
@@ -115,8 +109,7 @@
         app:layout_constraintBottom_toTopOf="@+id/EmailAddress"
         app:layout_constraintEnd_toStartOf="@+id/LastName"
         app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/EmailAddress"
