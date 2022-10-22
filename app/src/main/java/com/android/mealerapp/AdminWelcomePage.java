@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class AdminWelcomePage extends AppCompatActivity {
 
@@ -13,11 +14,8 @@ public class AdminWelcomePage extends AppCompatActivity {
         setContentView(R.layout.admin_welcome_screen);
     }
 
-    public void onClick(){
-        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+    public void onLogoutClick(View view){
+        Intent intent1 = new Intent(getApplicationContext(), rolePage.class);
         startActivity(intent1);
     }
-
-
-
 }
