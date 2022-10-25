@@ -7,6 +7,69 @@
     android:background="#023047"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/Loggedin_as..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/jomhuria"
+        android:text="@string/you_re_logged_in_as"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toStartOf="@+id/identity_2"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+
+    <TextView
+        android:id="@+id/identity_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="354dp"
+        android:fontFamily="@font/jomhuria"
+        android:text="@string/client"
+        android:textColor="#FFB703"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/foodicons2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/food_icons" />
+
+    <ImageView
+        android:id="@+id/upper_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/upper_vector" />
+
+    <ImageView
+        android:id="@+id/bottom_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="339dp"
+        android:layout_marginEnd="162dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bottom_vector" />
+
     <ImageView
         android:id="@+id/Logo"
         android:layout_width="wrap_content"
@@ -24,47 +87,12 @@
         android:layout_width="238dp"
         android:layout_height="54dp"
         android:layout_marginStart="86dp"
-        android:layout_marginTop="509dp"
+        android:layout_marginTop="510dp"
         android:layout_marginEnd="87dp"
         android:layout_marginBottom="168dp"
         android:onClick="onLogoutClick_1"
         android:text="LOG OUT"
         app:backgroundTint="#FB8500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Loggedin_as..."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="339dp"
-        android:fontFamily="@font/jomhuria"
-        android:text="You’re Logged in as"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/identity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="269dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="339dp"
-        android:fontFamily="@font/jomhuria"
-        android:text="CLIENT"
-        android:textColor="#FFB703"
-        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

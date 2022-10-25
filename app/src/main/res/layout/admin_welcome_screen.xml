@@ -25,9 +25,9 @@
         android:layout_width="238dp"
         android:layout_height="54dp"
         android:layout_marginTop="132dp"
-        android:text="LOG OUT"
         android:onClick="onLogoutClick"
-        android:textColor="#4E342E"
+        android:text="LOG OUT"
+        android:textColor="#FFFFFF"
         app:backgroundTint="#FB8500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -44,13 +44,13 @@
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:typeface="normal"
-        app:layout_constraintEnd_toStartOf="@+id/identity"
+        app:layout_constraintEnd_toStartOf="@+id/identity_2"
         app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Logo" />
 
     <TextView
-        android:id="@+id/identity"
+        android:id="@+id/identity_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="76dp"
@@ -61,5 +61,34 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/logout_button"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/foodicons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/food_icons" />
+
+    <ImageView
+        android:id="@+id/upper_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/upper_vector" />
+
+    <ImageView
+        android:id="@+id/bottom_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="339dp"
+        android:layout_marginEnd="162dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bottom_vector" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

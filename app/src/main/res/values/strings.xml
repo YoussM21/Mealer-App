@@ -8,4 +8,6 @@
     <string name="cookButton">Cook</string>
     <string name="clientButton">Client</string>
     <string name="ClientButton">Client</string>
+    <string name="you_re_logged_in_as">You’re Logged in as</string>
+    <string name="client">CLIENT</string>
 </resources>

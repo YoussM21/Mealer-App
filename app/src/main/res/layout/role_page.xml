@@ -8,18 +8,29 @@
 
 
     <ImageView
+        android:id="@+id/rectangle"
+        android:layout_width="431dp"
+        android:layout_height="724dp"
+        android:layout_marginTop="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle2" />
+
+    <ImageView
         android:id="@+id/logo2"
         android:layout_width="187dp"
         android:layout_height="67dp"
         android:layout_marginStart="98dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="627dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo2"
         tools:ignore="ContentDescription" />
 
@@ -34,7 +45,7 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/Login_option"
         app:layout_constraintEnd_toStartOf="@+id/client_role"
-        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -83,30 +94,65 @@
         android:id="@+id/cookButton"
         android:layout_width="100dp"
         android:layout_height="91dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="240dp"
         android:background="@color/cardview_shadow_end_color"
         android:contentDescription="@string/cookButton"
         android:onClick="onChefClick"
         android:text="@string/cookButton"
-        app:layout_constraintEnd_toStartOf="@+id/ClientButton"
-        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo2"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/chef1" />
 
     <ImageButton
         android:id="@+id/ClientButton"
         android:layout_width="112dp"
         android:layout_height="99dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="50dp"
         android:background="@color/cardview_shadow_end_color"
         android:contentDescription="@string/clientButton"
         android:onClick="onClientClick"
         android:text="@string/ClientButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.804"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo2"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image2" />
+
+    <ImageView
+        android:id="@+id/food_icons"
+        android:layout_width="425dp"
+        android:layout_height="706dp"
+        android:layout_marginTop="79dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/foodv2" />
+
+    <ImageView
+        android:id="@+id/lower_vector"
+        android:layout_width="408dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="482dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lower_vector_v2" />
+
+    <TextView
+        android:id="@+id/Im_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="574dp"
+        android:fontFamily="@font/jomhuria"
+        android:text="I'm a"
+        android:textColor="@color/white"
+        android:textSize="65sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
