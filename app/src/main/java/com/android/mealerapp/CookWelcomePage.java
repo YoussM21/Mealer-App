@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class CookWelcomePage extends AppCompatActivity {
 
     @Override
@@ -17,6 +19,7 @@ public class CookWelcomePage extends AppCompatActivity {
     public void onLogoutClick_2(View view){
         Intent intent1 = new Intent(getApplicationContext(), rolePage.class);
         startActivity(intent1);
+        FirebaseAuth.getInstance().signOut();
     }
 
 }
