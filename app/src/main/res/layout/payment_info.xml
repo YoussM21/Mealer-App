@@ -12,13 +12,13 @@
         android:layout_width="471dp"
         android:layout_height="763dp"
         android:layout_marginTop="95dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.171"
-        app:srcCompat="@drawable/rectangle2"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/rectangle2" />
 
     <ImageView
         android:id="@+id/lower_vector2"
@@ -76,7 +76,7 @@
         android:layout_width="187dp"
         android:layout_height="67dp"
         android:layout_marginStart="98dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="627dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,27 +91,26 @@
         android:layout_width="53dp"
         android:layout_height="58dp"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="99dp"
         android:fontFamily="@font/jomhuria"
         android:text="I'm a "
         android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/cook_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="154dp"
         android:fontFamily="@font/jomhuria"
         android:text="CLIENT"
         android:textColor="#FFB703"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/cook_title"
-        app:layout_constraintTop_toBottomOf="@+id/logo2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
