@@ -8,6 +8,36 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/foodicons3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/food_icons" />
+
+    <ImageView
+        android:id="@+id/upper_line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/upper_vector" />
+
+    <ImageView
+        android:id="@+id/bottom_line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="339dp"
+        android:layout_marginEnd="162dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bottom_vector" />
+
+    <ImageView
         android:id="@+id/Logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,28 +69,24 @@
         android:id="@+id/Loggedin_as..."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="339dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="323dp"
         android:fontFamily="@font/jomhuria"
         android:text="You’re Logged in as"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/identity"
+        android:id="@+id/identity_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="269dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="339dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="355dp"
         android:fontFamily="@font/jomhuria"
         android:text="COOK"
         android:textColor="#FFB703"
