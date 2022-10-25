@@ -9,13 +9,14 @@
 
     <ImageView
         android:id="@+id/rectangle"
-        android:layout_width="431dp"
-        android:layout_height="724dp"
+        android:layout_width="471dp"
+        android:layout_height="763dp"
         android:layout_marginTop="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171"
         app:srcCompat="@drawable/rectangle2" />
 
     <ImageView
@@ -120,20 +121,20 @@
 
     <ImageView
         android:id="@+id/food_icons"
-        android:layout_width="425dp"
-        android:layout_height="706dp"
-        android:layout_marginTop="79dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="582dp"
+        android:layout_height="788dp"
+        android:layout_marginStart="-70dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/foodv2" />
 
     <ImageView
         android:id="@+id/lower_vector"
         android:layout_width="408dp"
         android:layout_height="320dp"
-        android:layout_marginTop="482dp"
+        android:layout_marginTop="472dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lower_vector_v2" />
