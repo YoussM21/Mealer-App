@@ -7,22 +7,57 @@
     android:background="#5B8CA3">
 
 
+    <ImageView
+        android:id="@+id/rectangle5"
+        android:layout_width="471dp"
+        android:layout_height="763dp"
+        android:layout_marginTop="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171"
+        app:srcCompat="@drawable/rectangle2"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/food_icons3"
+        android:layout_width="582dp"
+        android:layout_height="788dp"
+        android:layout_marginStart="-70dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/foodv2" />
+
+    <ImageView
+        android:id="@+id/lower_vector4"
+        android:layout_width="408dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="432dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lower_vector_v2" />
+
     <TextView
         android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="269dp"
+        android:layout_marginStart="245dp"
         android:layout_marginTop="644dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginEnd="95dp"
         android:layout_marginBottom="37dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
         android:textColor="#FFEB3B"
-        android:textSize="32sp"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/login_option"
@@ -32,7 +67,7 @@
         android:fontFamily="@font/jomhuria"
         android:text="Have an account?  "
         android:textColor="@color/white"
-        android:textSize="32sp"
+        android:textSize="26sp"
         app:layout_constraintEnd_toStartOf="@+id/login2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,13 +79,12 @@
         android:layout_height="52dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="Last Name"
         android:inputType="textPersonName"
         android:textColor="@color/white"
-        android:textColorHint="#263238"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/FirstName"
@@ -108,7 +142,7 @@
         android:hint="First Name"
         android:inputType="textPersonName"
         android:textColor="@color/white"
-        android:textColorHint="#263238"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/EmailAddress"
         app:layout_constraintEnd_toStartOf="@+id/LastName"
@@ -125,7 +159,7 @@
         android:hint="Enter Email Address"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
-        android:textColorHint="#263238"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +175,7 @@
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:textColor="@color/white"
-        android:textColorHint="#263238"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,15 +185,16 @@
         android:id="@+id/AddressID"
         android:layout_width="377dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint=" Enter Address"
         android:inputType="textPersonName"
         android:textColor="@color/white"
-        android:textColorHint="#263238"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordID" />
 
@@ -167,12 +202,13 @@
         android:id="@+id/Next"
         android:layout_width="274dp"
         android:layout_height="53dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="52dp"
         android:onClick="onNextClick"
         android:text="NEXT"
-        android:textColor="#4E342E"
+        android:textColor="@color/white"
         app:backgroundTint="#FB8500"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddressID" />
 

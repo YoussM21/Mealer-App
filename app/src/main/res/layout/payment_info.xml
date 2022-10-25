@@ -7,6 +7,39 @@
     android:background="#5B8CA3">
 
 
+    <ImageView
+        android:id="@+id/rectangle2"
+        android:layout_width="471dp"
+        android:layout_height="763dp"
+        android:layout_marginTop="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171"
+        app:srcCompat="@drawable/rectangle2"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/lower_vector2"
+        android:layout_width="408dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="472dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lower_vector_v2" />
+
+    <ImageView
+        android:id="@+id/food_icons2"
+        android:layout_width="582dp"
+        android:layout_height="788dp"
+        android:layout_marginStart="-70dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/foodv2" />
+
     <Button
         android:id="@+id/signUp_button"
         android:layout_width="238dp"
@@ -32,6 +65,7 @@
         android:hint="@string/card_number"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,6 +147,7 @@
         android:hint="Name on Card"
         android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/CardNumber"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,9 +163,10 @@
         android:hint="EXP. Date"
         android:inputType="date"
         android:textColor="@color/white"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintEnd_toStartOf="@+id/CVV_value"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CardNumber" />
 
@@ -139,12 +175,13 @@
         android:layout_width="159dp"
         android:layout_height="54dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
         android:fontFamily="@font/jomhuria"
         android:hint="CVV"
         android:inputType="number"
         android:textColor="@color/white"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CardNumber" />
