@@ -70,7 +70,7 @@
         android:layout_marginBottom="580dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
-        android:textColor="#FFB703"
+        android:textColor="#FFEB3B"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,6 +127,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478"
         app:srcCompat="@drawable/food_icons_v3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
