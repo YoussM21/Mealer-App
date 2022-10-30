@@ -44,20 +44,14 @@
         android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="245dp"
-        android:layout_marginTop="644dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginStart="249dp"
+        android:layout_marginTop="645dp"
         android:fontFamily="@font/jomhuria"
         android:text="LOG IN"
         android:textColor="#FFEB3B"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/login_option"
@@ -121,14 +115,13 @@
         android:id="@+id/Identity_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="146dp"
+        android:layout_marginTop="58dp"
         android:fontFamily="@font/jomhuria"
         android:text="CLIENT"
         android:textColor="#FFEB3B"
         android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/Im_a..."
+        app:layout_constraintTop_toTopOf="@+id/food_icons3" />
 
     <EditText
         android:id="@+id/FirstName"

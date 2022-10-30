@@ -62,10 +62,8 @@
         android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="677dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/jomhuria"
         android:minWidth="48dp"
         android:minHeight="48dp"
@@ -73,10 +71,8 @@
         android:text="@string/log_in"
         android:textColor="#FFEB3B"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/login_option"
+        app:layout_constraintTop_toBottomOf="@+id/SignUp_button" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -232,9 +228,9 @@
         android:id="@+id/View_cheque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="533dp"
-        android:layout_marginEnd="268dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="528dp"
+        android:layout_marginEnd="262dp"
         android:layout_marginBottom="158dp"
         android:fontFamily="@font/jomhuria"
         android:text="Void Cheque Picture"
@@ -242,10 +238,8 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/UploadButton"

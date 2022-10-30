@@ -103,14 +103,14 @@
         android:id="@+id/cook_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="99dp"
-        android:layout_marginEnd="154dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="27dp"
         android:fontFamily="@font/jomhuria"
         android:text="CLIENT"
-        android:textColor="#FFB703"
+        android:textColor="#FFEB3B"
         android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/cook_title"
+        app:layout_constraintTop_toTopOf="@+id/food_icons2" />
 
     <ImageView
         android:id="@+id/imageView"
