@@ -11,7 +11,7 @@ public class AdminWelcomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_welcome_screen);
+        setContentView(R.layout.admin_page);
     }
 
     public void onLogoutClick(View view){
