@@ -11,13 +11,13 @@
         android:layout_width="471dp"
         android:layout_height="763dp"
         android:layout_marginTop="85dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.205"
-        app:srcCompat="@drawable/rectangle2"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/rectangle2" />
 
     <ImageView
         android:id="@+id/foodicons4"
@@ -110,11 +110,22 @@
         android:layout_marginStart="86dp"
         android:layout_marginTop="648dp"
         android:layout_marginEnd="87dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="20dp"
         android:onClick="onLogoutClick"
         android:text="LOG OUT"
         android:textColor="#FFFFFF"
         app:backgroundTint="#FB8500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/list_of_complaints"
+        android:layout_width="408dp"
+        android:layout_height="534dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
