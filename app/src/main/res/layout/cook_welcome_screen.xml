@@ -83,17 +83,14 @@
         android:id="@+id/identity_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="323dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginBottom="355dp"
+        android:layout_marginBottom="380dp"
         android:fontFamily="@font/jomhuria"
         android:text="COOK"
         android:textColor="#FFB703"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

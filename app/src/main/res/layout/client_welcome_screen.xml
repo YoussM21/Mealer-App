@@ -11,33 +11,32 @@
         android:id="@+id/Loggedin_as..."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
         android:fontFamily="@font/jomhuria"
         android:text="@string/you_re_logged_in_as"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:typeface="normal"
-        app:layout_constraintEnd_toStartOf="@+id/identity_2"
-        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
 
     <TextView
         android:id="@+id/identity_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="323dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="354dp"
         android:fontFamily="@font/jomhuria"
         android:text="@string/client"
         android:textColor="#FFB703"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466" />
 
     <ImageView
         android:id="@+id/foodicons2"
@@ -90,7 +89,7 @@
         android:layout_marginTop="510dp"
         android:layout_marginEnd="87dp"
         android:layout_marginBottom="168dp"
-        android:onClick="onLogoutClick_1"
+        android:onClick="onLogoutClick_3"
         android:text="LOG OUT"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"

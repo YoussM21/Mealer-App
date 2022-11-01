@@ -2,20 +2,23 @@ package com.android.mealerapp;
 
 public class UserAccount extends Account{
 
-    private int creditCardNum;
-    private int creditCardDate;
+    private String id;
+    private CreditCard card;
     private final String ROLE = "Client";
 
     public UserAccount(){ }
 
-    public UserAccount(String name, String lastName, String email, String pswd, String address, int creditCardNum, int creditCardDate){
-        super(name, lastName, email, pswd, address);
-        this.creditCardNum = creditCardNum;
-        this.creditCardDate = creditCardDate;
-        
+    public UserAccount(String id, String name, String lastName, String email, String pswd, String address, CreditCard card){
+        super(id, name, lastName, email, pswd, address);
+        this.card = card;
     }
 
     public String getROLE() {
         return ROLE;
     }
+
+    public CreditCard getCard() {
+        return card;
+    }
+
 }

@@ -9,9 +9,8 @@ public class ChefAccount extends Account{
     public ChefAccount(){}
 
     public ChefAccount(String id, String name, String lastName, String email, String pswd, String address, String description){
-        super(name, lastName, email, pswd, address);
+        super(id, name, lastName, email, pswd, address);
         this.description = description;
-        this.id = id;
     }
     public String getDescription() {
         return description;
@@ -21,11 +20,5 @@ public class ChefAccount extends Account{
     }
     public String getROLE() {
         return ROLE;
-    }
-    public String getId() {
-        return id;
-    }
-    public void setId(String id) {
-        this.id = id;
     }
 }

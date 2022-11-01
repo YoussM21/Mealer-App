@@ -17,9 +17,9 @@ public class CookWelcomePage extends AppCompatActivity {
     }
 
     public void onLogoutClick_2(View view){
+        FirebaseAuth.getInstance().signOut();
         Intent intent1 = new Intent(getApplicationContext(), rolePage.class);
         startActivity(intent1);
-        FirebaseAuth.getInstance().signOut();
     }
 
 }
