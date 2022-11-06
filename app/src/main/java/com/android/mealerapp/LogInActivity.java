@@ -54,7 +54,7 @@ public class LogInActivity extends AppCompatActivity {
 
                 if (user != null){
                     String id = user.getUid();
-                    if (id.equals("AlHP357zDcM5Fq48mmAWrSs1XrH3")){
+                    if (id.equals("ZJUEM6x9L1YGhDWRCiJdfpH9qdI2")){
                         updateUI("ADMIN");
                     }
 

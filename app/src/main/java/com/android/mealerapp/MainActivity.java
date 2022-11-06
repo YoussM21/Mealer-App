@@ -17,20 +17,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-    private FirebaseUser user;
-    private FirebaseAuth mAuth;
-    private DatabaseReference usersDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homescreen);
-        mAuth = FirebaseAuth.getInstance();
-        user = mAuth.getCurrentUser();
-        usersDatabase = FirebaseDatabase.getInstance().getReference("Users");
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        DatabaseReference usersDatabase = FirebaseDatabase.getInstance().getReference("Users");
 
         if (user != null){
             String id = user.getUid();
-            if (id.equals("AlHP357zDcM5Fq48mmAWrSs1XrH3")){
+            if (id.equals("ZJUEM6x9L1YGhDWRCiJdfpH9qdI2")){
                 reload("ADMIN");
             }
 
