@@ -2,7 +2,10 @@ package com.android.mealerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -29,6 +32,8 @@ public class CookSuspension extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Invalid date", Toast.LENGTH_SHORT).show();
             }
         }
+        Button Suspend = findViewById(R.id.buttonsuspension);
+        Suspend .setOnClickListener((View.OnClickListener) this);
     }
 
     private Boolean verifyDate(String date) {
