@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#023047">
 
     <TextView
         android:id="@+id/textView"
@@ -11,7 +12,9 @@
         android:layout_height="47dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="20dp"
-        android:text="TextView"
+        android:fontFamily="@font/jomhuria"
+        android:textColor="@color/white"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,9 +22,11 @@
         android:id="@+id/textView2"
         android:layout_width="374dp"
         android:layout_height="95dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="20dp"
-        android:text="TextView"
+        android:fontFamily="@font/jomhuria"
+        android:textColor="@color/white"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +37,7 @@
         android:layout_marginStart="239dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="19dp"
-        android:layout_marginBottom="421dp"
+        android:layout_marginBottom="400dp"
         android:text="@string/delete_complaint"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +54,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="238dp"
-        android:layout_marginBottom="421dp"
+        android:layout_marginBottom="400dp"
         android:text="@string/suspend_cook"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,4 +63,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Space
+        android:layout_width="374dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

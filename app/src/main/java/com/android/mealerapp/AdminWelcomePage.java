@@ -89,22 +89,18 @@ public class AdminWelcomePage extends AppCompatActivity {
         dialogBuilder.setView(dialogView);
 
 
-        final Button buttonUpdate = dialogView.findViewById(R.id.buttonSuspendCook);
+        final Button buttonSuspend = dialogView.findViewById(R.id.buttonSuspendCook);
         final Button buttonDelete = dialogView.findViewById(R.id.buttonDeleteComplaint);
 
         dialogBuilder.setTitle(cook);
         final AlertDialog b = dialogBuilder.create();
         b.show();
 
-        buttonUpdate.setOnClickListener(new View.OnClickListener() {
+        buttonSuspend.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                String name = editTextName.getText().toString().trim();
-                double price = Double.parseDouble(editTextPrice.getText().toString());
-                if (!TextUtils.isEmpty(name)) {
-                    SuspendCook(productId, name, price);
-                    b.dismiss();
-                }
+            public void onClick(View v) {
+                Intent suspendCook = new Intent(getApplicationContext(),CookSuspension.class);
+                startActivity(suspendCook);
             }
         });
 
