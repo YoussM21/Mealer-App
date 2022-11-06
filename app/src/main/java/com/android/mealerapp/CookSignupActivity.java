@@ -56,7 +56,7 @@ public class CookSignupActivity extends AppCompatActivity {
                 if(chef != null ){
                     String id = chef.getUid();
                     chefAccount = new ChefAccount(id, name, lastName, email, pswd1, address, description);
-                    databaseUsers.child("Chefs").child(id).setValue(chefAccount);
+                    databaseUsers.child(id).setValue(chefAccount);
                     updateUI();
                 }
             }

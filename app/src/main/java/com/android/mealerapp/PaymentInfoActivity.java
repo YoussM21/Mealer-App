@@ -53,7 +53,7 @@ public class PaymentInfoActivity extends AppCompatActivity {
                     UserAccount clientAccount;
                     clientAccount = new UserAccount(id, data.getString("NAME"), data.getString("LAST_NAME"),
                             data.getString("EMAIL"), data.getString("PSWD"), data.getString("ADDRESS"), card);
-                    databaseUsers.child("Clients").child(id).setValue(clientAccount);
+                    databaseUsers.child(id).setValue(clientAccount);
                     updateUI();
                 }
 

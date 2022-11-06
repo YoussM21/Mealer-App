@@ -13,61 +13,69 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class LogInActivity extends AppCompatActivity {
     private DatabaseReference databaseUsers;
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseUser user;
     EditText editTextUserEmail, editTextUserPswd;
 
-    private List<ChefAccount> chefList;
-    private List<UserAccount> clientList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
-        chefList = new ArrayList<ChefAccount>();
-        clientList = new ArrayList<UserAccount>();
 
         databaseUsers = FirebaseDatabase.getInstance().getReference("Users");
         mAuth = FirebaseAuth.getInstance();
 
         editTextUserEmail = findViewById(R.id.Email_input);
         editTextUserPswd = findViewById(R.id.Password_input);
+
     }
 
     @Override
     protected void onStart(){
         super.onStart();
-        databaseUsers.addValueEventListener(new ValueEventListener() {
+        user = mAuth.getCurrentUser();
+        if (user != null){
+            Task<Void> task = user.reload();
+        }
+        mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                chefList.clear();
-                clientList.clear();
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                user = firebaseAuth.getCurrentUser();
 
-                for (DataSnapshot postSnapshot: snapshot.child("Chefs").getChildren()) {
-                    ChefAccount chef = postSnapshot.getValue(ChefAccount.class);
-                    chefList.add(chef);
+                if (user != null){
+                    String id = user.getUid();
+                    if (id.equals("AlHP357zDcM5Fq48mmAWrSs1XrH3")){
+                        updateUI("ADMIN");
+                    }
+
+                    databaseUsers.child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DataSnapshot> task) {
+                            DataSnapshot dataSnapshot = task.getResult();
+                            Account value = dataSnapshot.getValue(Account.class);
+                            if (value != null){
+                                if (value.getRole().equals("CHEF")){
+                                    updateUI("CHEF");
+                                }
+                                else {
+                                    updateUI("CLIENT");
+                                }
+                            }
+
+                        }
+                    });
+
                 }
-
-                for (DataSnapshot postSnapshot: snapshot.child("Clients").getChildren()) {
-                    UserAccount client = postSnapshot.getValue(UserAccount.class);
-                    clientList.add(client);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
     }
@@ -91,29 +99,26 @@ public class LogInActivity extends AppCompatActivity {
         String userPswd = editTextUserPswd.getText().toString().trim();
 
         signInUser(userEmail,userPswd);
-        Class destination = null;
-        for (ChefAccount i : chefList) {
-            if (i.getEmail().equals(userEmail) && i.getPswd().equals(userPswd)){
-                destination = CookWelcomePage.class;
-                break;
-            }
-        }
-
-        for (UserAccount i : clientList) {
-            if (i.getEmail().equals(userEmail) && i.getPswd().equals(userPswd)){
-                destination = ClientWelcomePage.class;
-                break;
-            }
-        }
-        if(destination != null){
-            Intent page = new Intent(getApplicationContext(), destination);
-            startActivity(page);
-        }
-        else {
-            Toast.makeText(LogInActivity.this, "Cannot proceed.", Toast.LENGTH_SHORT).show();
-        }
 
 
 
+
+    }
+
+    private void updateUI(String role){
+        Intent i;
+        if (role.equals("ADMIN")){
+            i = new Intent(getApplicationContext(), AdminWelcomePage.class);
+            startActivity(i);
+        }
+        else if (role.equals("CHEF")){
+            i = new Intent(getApplicationContext(), CookWelcomePage.class);
+            startActivity(i);
+        }
+        else{
+            i = new Intent(getApplicationContext(), ClientWelcomePage.class);
+            startActivity(i);
+        }
+        finish();
     }
 }

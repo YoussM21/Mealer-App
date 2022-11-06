@@ -2,13 +2,14 @@ package com.android.mealerapp;
 
 public class Account {
 
-    protected String id, name, lastName, email, pswd, address;
+    protected String id, role,  name, lastName, email, pswd, address;
 
 
     public Account(){ }
     
-    public Account(String id, String name, String lastName, String email, String pswd, String address){
+    public Account(String id, String role, String name, String lastName, String email, String pswd, String address){
         this.id = id;
+        this.role = role;
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -17,6 +18,7 @@ public class Account {
 
     }
 
+    public String getRole() {return role;}
     public void setId(String id) {this.id = id;}
     public String getId() {return id;}
     public void setName(String name1) {
