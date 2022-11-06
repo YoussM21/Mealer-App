@@ -10,4 +10,6 @@
     <string name="ClientButton">Client</string>
     <string name="you_re_logged_in_as">You’re Logged in as</string>
     <string name="client">CLIENT</string>
+    <string name="suspend_cook">Suspend cook</string>
+    <string name="delete_complaint">Delete complaint</string>
 </resources>

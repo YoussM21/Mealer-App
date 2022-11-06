@@ -1,14 +1,18 @@
 package com.android.mealerapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -77,7 +81,55 @@ public class AdminWelcomePage extends AppCompatActivity {
 
     }
 
-    private void showUpdateDeleteDialog(final String productId, String productName) {
+    private void showUpdateDeleteDialog(final String complaint, String cook) {
+
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.update_complaint, null);
+        dialogBuilder.setView(dialogView);
+
+
+        final Button buttonUpdate = dialogView.findViewById(R.id.buttonSuspendCook);
+        final Button buttonDelete = dialogView.findViewById(R.id.buttonDeleteComplaint);
+
+        dialogBuilder.setTitle(cook);
+        final AlertDialog b = dialogBuilder.create();
+        b.show();
+
+        buttonUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = editTextName.getText().toString().trim();
+                double price = Double.parseDouble(editTextPrice.getText().toString());
+                if (!TextUtils.isEmpty(name)) {
+                    SuspendCook(productId, name, price);
+                    b.dismiss();
+                }
+            }
+        });
+
+        buttonDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteComplaints(complaint);
+                b.dismiss();
+            }
+        });
+    }
+
+    private void SuspendCook (String id) {
+
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
+
+
+        Toast.makeText(getApplicationContext(), "Product Updated", Toast.LENGTH_LONG).show();
+    }
+
+    private void deleteComplaints(String id) {
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
+        dR.removeValue();
+
+        Toast.makeText(getApplicationContext(), "Complaint Deleted", Toast.LENGTH_LONG).show();
 
     }
 }
