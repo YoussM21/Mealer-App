@@ -12,4 +12,8 @@
     <string name="client">CLIENT</string>
     <string name="suspend_cook">Suspend cook</string>
     <string name="delete_complaint">Delete complaint</string>
+    <string name="mm_dd_yyyy">mm/dd/yyyy</string>
+    <string name="suspend">Suspend</string>
+    <string name="cookname">CookName</string>
+    <string name="choose_suspension_date">Choose suspension date</string>
 </resources>
