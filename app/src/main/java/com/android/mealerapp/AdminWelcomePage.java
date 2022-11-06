@@ -35,7 +35,7 @@ public class AdminWelcomePage extends AppCompatActivity {
         listViewComplaints = findViewById(R.id.listViewComplaints);
 
         complaints = new ArrayList<>();
-        databaseComplaints = FirebaseDatabase.getInstance().getReference("products");
+        databaseComplaints = FirebaseDatabase.getInstance().getReference("complaints");
 
         listViewComplaints.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
