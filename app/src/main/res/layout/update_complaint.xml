@@ -10,24 +10,32 @@
         android:id="@+id/textView"
         android:layout_width="374dp"
         android:layout_height="47dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="632dp"
         android:fontFamily="@font/jomhuria"
         android:textColor="@color/white"
         android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="374dp"
         android:layout_height="95dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="484dp"
         android:fontFamily="@font/jomhuria"
         android:textColor="@color/white"
         android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -35,7 +43,7 @@
         android:layout_width="153dp"
         android:layout_height="70dp"
         android:layout_marginStart="239dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="261dp"
         android:layout_marginEnd="19dp"
         android:layout_marginBottom="400dp"
         android:text="@string/delete_complaint"
@@ -44,8 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSuspendCook"

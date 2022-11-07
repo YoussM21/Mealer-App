@@ -17,12 +17,10 @@ public class Complaints {
         }
 
         public void setComplaint(String complaint) {
-
             this._complaint = complaint;
         }
 
         public String getCookName() {
-
             return _cook.getName();
         }
     }
