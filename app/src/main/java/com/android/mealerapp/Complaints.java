@@ -1,8 +1,6 @@
 package com.android.mealerapp;
 
 
-import android.util.CloseGuard;
-
 public class Complaints {
         ChefAccount _cook;
         String _complaint;
@@ -17,12 +15,10 @@ public class Complaints {
         }
 
         public void setComplaint(String complaint) {
-
             this._complaint = complaint;
         }
 
         public String getCookName() {
-
             return _cook.getName();
         }
     }
