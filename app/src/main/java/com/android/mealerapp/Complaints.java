@@ -1,8 +1,6 @@
 package com.android.mealerapp;
 
 
-import android.util.CloseGuard;
-
 public class Complaints {
         ChefAccount _cook;
         String _complaint;

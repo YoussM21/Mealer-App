@@ -98,7 +98,7 @@ public class AdminWelcomePage extends AppCompatActivity {
 
         buttonSuspend.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent suspendCook = new Intent(getApplicationContext(),CookSuspension.class);
                 startActivity(suspendCook);
             }
@@ -113,12 +113,13 @@ public class AdminWelcomePage extends AppCompatActivity {
         });
     }
 
-    private void SuspendCook (String id) {
+    private void SuspendCook (String id,ChefAccount name) {
 
         DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
+        Complaints complaint = new Complaints (id, name);
+        dR.setValue(complaint);
 
-
-        Toast.makeText(getApplicationContext(), "Product Updated", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Complaint Updated", Toast.LENGTH_LONG).show();
     }
 
     private void deleteComplaints(String id) {
