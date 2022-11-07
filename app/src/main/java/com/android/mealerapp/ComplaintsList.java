@@ -11,12 +11,12 @@ import java.util.List;
 
 public class ComplaintsList extends ArrayAdapter<Complaints> {
         private Activity context;
-        List<Complaints> Complaints;
+        List<Complaints> complaints;
 
         public ComplaintsList (Activity context, List<Complaints> complaints) {
             super(context, R.layout.layout_complaints_list, complaints);
             this.context = context;
-            this.Complaints = complaints;
+            this.complaints = complaints;
         }
 
         @Override
@@ -27,9 +27,9 @@ public class ComplaintsList extends ArrayAdapter<Complaints> {
             TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
             TextView textViewDescription = (TextView) listViewItem.findViewById(R.id.textViewDescription);
 
-            Complaints complaints = Complaints.get(position);
-            textViewName.setText(complaints.getCookName());
-            textViewDescription.setText(complaints.getComplaint());
+            Complaints complaint = complaints.get(position);
+            textViewName.setText(complaint.getCookName());
+            textViewDescription.setText(complaint.getComplaint());
             return listViewItem;
         }
     }

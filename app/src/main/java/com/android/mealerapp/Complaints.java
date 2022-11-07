@@ -5,6 +5,8 @@ public class Complaints {
         ChefAccount _cook;
         String _complaint;
 
+        public Complaints(){}
+
         public Complaints(String complaint, ChefAccount cook){
             this._complaint = complaint;
             this._cook = cook;

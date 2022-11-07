@@ -36,9 +36,9 @@ public class AdminWelcomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_page);
 
+        complaints = new ArrayList<>();
         listViewComplaints = findViewById(R.id.listViewComplaints);
 
-        complaints = new ArrayList<>();
         databaseComplaints = FirebaseDatabase.getInstance().getReference("complaints");
 
         listViewComplaints.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -72,6 +72,7 @@ public class AdminWelcomePage extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void onLogoutClick(View view){
