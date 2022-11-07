@@ -14,4 +14,43 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    public void getComplaint_isCorrect(){
+        boolean expected = true;
+        boolean actual;
+
+        ChefAccount testChef = new ChefAccount("test","test","test","test","test","test","test");
+        Complaints testComplaint = new Complaints("test",testChef);
+
+        actual = testComplaint.getComplaint() != null;
+        assertEquals(expected, actual);
+    }
+
+    public void getCookName_isCorrect(){
+        ChefAccount testChef = new ChefAccount("test","name1","test","test","test","test","test");
+        Complaints testComplaint = new Complaints("test",testChef);
+        String expected = "name1";
+        String actual = testComplaint.getCookName();
+
+        assertEquals(expected,actual);
+    }
+
+    public void getCreditCardNum_isCorrect(){
+        CreditCard testCard = new CreditCard("test",12345678,"test",100);
+        long expected = 12345678;
+        long actual = testCard.getCreditCardNum();
+
+        assertEquals(expected,actual);
+    }
+
+    public void getCreditCardCCV_isCorrect(){
+        CreditCard testCard = new CreditCard("test",12345678,"test",100);
+        int expected = 100;
+        int actual = testCard.getCreditCardCVV();
+
+        assertEquals(expected,actual);
+    }
+
+
+
 }
