@@ -31,6 +31,8 @@ public class AdminWelcomePage extends AppCompatActivity {
     List<Complaints> complaints;
     DatabaseReference databaseComplaints;
 
+    Button logoutButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,18 @@ public class AdminWelcomePage extends AppCompatActivity {
         complaints = new ArrayList<>();
         listViewComplaints = findViewById(R.id.listViewComplaints);
 
-        databaseComplaints = FirebaseDatabase.getInstance().getReference("complaints");
+
+
+        databaseComplaints = FirebaseDatabase.getInstance().getReference("Complaints");
+
+        logoutButton = findViewById(R.id.logout_button2);
+
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onLogoutClick();
+            }
+        });
 
         listViewComplaints.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -72,10 +85,14 @@ public class AdminWelcomePage extends AppCompatActivity {
 
             }
         });
-
+        /**
+        ChefAccount chef = new ChefAccount("ierYufw34","Thomas", "Jeffrey","tjeff@gmail.com","*Tmotew34","23 Street Way","Hello!");
+        Complaints cpl = new Complaints("Test complaint", chef);
+        String id = databaseComplaints.push().getKey();
+        databaseComplaints.child(id).setValue(cpl);**/
     }
 
-    public void onLogoutClick(View view){
+    public void onLogoutClick(){
         FirebaseAuth.getInstance().signOut();
         Intent intent1 = new Intent(getApplicationContext(), rolePage.class);
         startActivity(intent1);

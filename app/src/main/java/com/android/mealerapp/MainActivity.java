@@ -31,23 +31,24 @@ public class MainActivity extends AppCompatActivity {
             if (id.equals("ZJUEM6x9L1YGhDWRCiJdfpH9qdI2")){
                 reload("ADMIN");
             }
+            else {
+                usersDatabase.child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        DataSnapshot dataSnapshot = task.getResult();
+                        Account value = dataSnapshot.getValue(Account.class);
+                        if (value != null){
+                            if (value.getRole().equals("CHEF")){
+                                reload("CHEF");
+                            }
+                            else {
+                                reload("CLIENT");
+                            }
+                        }
 
-            usersDatabase.child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<DataSnapshot> task) {
-                    DataSnapshot dataSnapshot = task.getResult();
-                    Account value = dataSnapshot.getValue(Account.class);
-                    if (value != null){
-                        if (value.getRole().equals("CHEF")){
-                            reload("CHEF");
-                        }
-                        else {
-                            reload("CLIENT");
-                        }
                     }
-
-                }
-            });
+                });
+            }
         }
         else{
             loadSignUpPage();

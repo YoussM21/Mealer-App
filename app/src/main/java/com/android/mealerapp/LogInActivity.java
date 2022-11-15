@@ -57,23 +57,24 @@ public class LogInActivity extends AppCompatActivity {
                     if (id.equals("ZJUEM6x9L1YGhDWRCiJdfpH9qdI2")){
                         updateUI("ADMIN");
                     }
+                    else{
+                        databaseUsers.child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                DataSnapshot dataSnapshot = task.getResult();
+                                Account value = dataSnapshot.getValue(Account.class);
+                                if (value != null){
+                                    if (value.getRole().equals("CHEF")){
+                                        updateUI("CHEF");
+                                    }
+                                    else {
+                                        updateUI("CLIENT");
+                                    }
+                                }
 
-                    databaseUsers.child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DataSnapshot> task) {
-                            DataSnapshot dataSnapshot = task.getResult();
-                            Account value = dataSnapshot.getValue(Account.class);
-                            if (value != null){
-                                if (value.getRole().equals("CHEF")){
-                                    updateUI("CHEF");
-                                }
-                                else {
-                                    updateUI("CLIENT");
-                                }
                             }
-
-                        }
-                    });
+                        });
+                    }
 
                 }
             }
@@ -110,15 +111,17 @@ public class LogInActivity extends AppCompatActivity {
         if (role.equals("ADMIN")){
             i = new Intent(getApplicationContext(), AdminWelcomePage.class);
             startActivity(i);
+            finish();
         }
         else if (role.equals("CHEF")){
             i = new Intent(getApplicationContext(), CookWelcomePage.class);
             startActivity(i);
+            finish();
         }
         else{
             i = new Intent(getApplicationContext(), ClientWelcomePage.class);
             startActivity(i);
+            finish();
         }
-        finish();
     }
 }

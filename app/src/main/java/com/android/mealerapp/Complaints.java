@@ -2,8 +2,8 @@ package com.android.mealerapp;
 
 
 public class Complaints {
-        ChefAccount _cook;
-        String _complaint;
+        private ChefAccount _cook;
+        private String _complaint;
 
         public Complaints(){}
 
@@ -23,4 +23,11 @@ public class Complaints {
         public String getCookName() {
             return _cook.getName();
         }
-    }
+
+        public ChefAccount get_cook(){
+            return _cook;
+        }
+        public void set_cook(ChefAccount cook) {
+            _cook = cook;
+        }
+}
