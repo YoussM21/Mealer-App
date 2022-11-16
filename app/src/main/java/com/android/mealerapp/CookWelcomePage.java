@@ -15,6 +15,7 @@ public class CookWelcomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.cook_page);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         DatabaseReference usersDatabase = FirebaseDatabase.getInstance().getReference("Users");
