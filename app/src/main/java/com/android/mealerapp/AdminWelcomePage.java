@@ -28,7 +28,7 @@ public class AdminWelcomePage extends AppCompatActivity {
 
     ListView listViewComplaints;
 
-    List<Complaints> complaints;
+    List<Complaint> complaints;
     DatabaseReference databaseComplaints;
 
     Button logoutButton;
@@ -57,7 +57,7 @@ public class AdminWelcomePage extends AppCompatActivity {
         listViewComplaints.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Complaints complaint = complaints.get(i);
+                Complaint complaint = complaints.get(i);
                 showUpdateDeleteDialog(complaint.getComplaint(), complaint.getCookName());
                 return true;
             }
@@ -72,7 +72,7 @@ public class AdminWelcomePage extends AppCompatActivity {
                 complaints.clear();
 
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    Complaints complaint = postSnapshot.getValue(Complaints.class);
+                    Complaint complaint = postSnapshot.getValue(Complaint.class);
                     complaints.add(complaint);
                 }
 
@@ -134,7 +134,7 @@ public class AdminWelcomePage extends AppCompatActivity {
     private void SuspendCook (String id,ChefAccount name) {
 
         DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
-        Complaints complaint = new Complaints (id, name);
+        Complaint complaint = new Complaint (id, name);
         dR.setValue(complaint);
 
         Toast.makeText(getApplicationContext(), "Complaint Updated", Toast.LENGTH_LONG).show();

@@ -9,14 +9,14 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ComplaintsList extends ArrayAdapter<Complaint> {
+public class MenuItemList extends ArrayAdapter<MenuItem> {
         private Activity context;
-        List<Complaint> complaints;
+        List<MenuItem> Meals;
 
-        public ComplaintsList (Activity context, List<Complaint> complaints) {
-            super(context, R.layout.layout_complaints_list, complaints);
+        public MenuItemList (Activity context, List<MenuItem> Meals) {
+            super(context, R.layout.layout_complaints_list, Meals);
             this.context = context;
-            this.complaints = complaints;
+            this.Meals = Meals;
         }
 
         @Override
@@ -27,10 +27,14 @@ public class ComplaintsList extends ArrayAdapter<Complaint> {
             TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
             TextView textViewDescription = (TextView) listViewItem.findViewById(R.id.textViewDescription);
 
-            Complaint complaint = complaints.get(position);
-            textViewName.setText(complaint.getCookName());
-            textViewDescription.setText(complaint.getComplaint());
+            MenuItem meal = Meals.get(position);
+            textViewName.setText(meal.getMeal());
+
+            if (meal.get_recommend())
+                textViewDescription.setText("Recommended");
+            else
+                textViewDescription.setText("");
+
             return listViewItem;
         }
     }
-
