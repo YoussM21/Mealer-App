@@ -4,6 +4,7 @@ package com.android.mealerapp;
 public class Complaints {
         private ChefAccount _cook;
         private String _complaint;
+        private String id;
 
         public Complaints(){}
 
@@ -12,7 +13,15 @@ public class Complaints {
             this._cook = cook;
         }
 
-        public String getComplaint() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getComplaint() {
             return _complaint;
         }
 

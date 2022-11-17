@@ -58,7 +58,7 @@ public class AdminWelcomePage extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Complaints complaint = complaints.get(i);
-                showUpdateDeleteDialog(complaint.getComplaint(), complaint.getCookName());
+                showUpdateDeleteDialog(complaint.getId(), complaint.getCookName());
                 return true;
             }
         });
@@ -89,7 +89,8 @@ public class AdminWelcomePage extends AppCompatActivity {
         ChefAccount chef = new ChefAccount("ierYufw34","Thomas", "Jeffrey","tjeff@gmail.com","*Tmotew34","23 Street Way","Hello!");
         Complaints cpl = new Complaints("Test complaint", chef);
         String id = databaseComplaints.push().getKey();
-        databaseComplaints.child(id).setValue(cpl);**/
+        cpl.setId(id);
+        databaseComplaints.child(id).setValue(cpl);*/
     }
 
     public void onLogoutClick(){
@@ -99,7 +100,7 @@ public class AdminWelcomePage extends AppCompatActivity {
 
     }
 
-    private void showUpdateDeleteDialog(final String complaint, String cook) {
+    private void showUpdateDeleteDialog(final String complaintId, String cookName) {
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
@@ -110,7 +111,7 @@ public class AdminWelcomePage extends AppCompatActivity {
         final Button buttonSuspend = dialogView.findViewById(R.id.buttonSuspendCook);
         final Button buttonDelete = dialogView.findViewById(R.id.buttonDeleteComplaint);
 
-        dialogBuilder.setTitle(cook);
+        dialogBuilder.setTitle(cookName);
         final AlertDialog b = dialogBuilder.create();
         b.show();
 
@@ -125,7 +126,7 @@ public class AdminWelcomePage extends AppCompatActivity {
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteComplaints(complaint);
+                deleteComplaints(complaintId);
                 b.dismiss();
             }
         });
@@ -141,7 +142,7 @@ public class AdminWelcomePage extends AppCompatActivity {
     }
 
     private void deleteComplaints(String id) {
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Complaints").child(id);
         dR.removeValue();
 
         Toast.makeText(getApplicationContext(), "Complaint Deleted", Toast.LENGTH_LONG).show();
