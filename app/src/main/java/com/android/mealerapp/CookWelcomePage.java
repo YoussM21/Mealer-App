@@ -23,7 +23,7 @@ public class CookWelcomePage extends AppCompatActivity {
     }
 
     public void onNewMealClick(View view){
-        Intent intent2 = new Intent(getApplicationContext(), LogInActivity.class);
+        Intent intent2 = new Intent(getApplicationContext(), MenuEditor.class);
         startActivity(intent2);
     }
 
