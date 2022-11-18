@@ -16,4 +16,6 @@
     <string name="suspend">Suspend</string>
     <string name="cookname">CookName</string>
     <string name="choose_suspension_date">Choose suspension date</string>
+    <string name="permanent_suspension">Permanent Suspension</string>
+    <string name="temporary_suspension">Temporary Suspension</string>
 </resources>
