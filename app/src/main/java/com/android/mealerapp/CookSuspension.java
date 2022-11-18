@@ -3,31 +3,33 @@ package com.android.mealerapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+
 public class CookSuspension extends AppCompatActivity {
 
     ChefAccount _cook;
     String _complaints;
     private String date;
+    private String id;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cook_suspension);
-    }
-
-    private void updateInfo (){
 
         Boolean isValid = false;
         EditText suspensionDate = (EditText) findViewById(R.id.suspensionDate);
 
-        while(!isValid) {
+        while (!isValid) {
             date = suspensionDate.getText().toString();
 
             isValid = verifyDate(date);
@@ -35,8 +37,27 @@ public class CookSuspension extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Invalid date", Toast.LENGTH_SHORT).show();
             }
         }
-        Button Suspend = findViewById(R.id.buttonsuspension);
-        Suspend .setOnClickListener((View.OnClickListener) this);
+
+        Button PermanentSuspension = findViewById(R.id.buttonsuspension2);
+        PermanentSuspension.setOnClickListener((View.OnClickListener) this);
+        Button TemporarySuspension = findViewById(R.id.buttonsuspension);
+        TemporarySuspension.setOnClickListener((View.OnClickListener) this);
+
+    }
+            public void onClick(View view) {
+            AdminWelcomePage dR = new AdminWelcomePage();
+            Intent returnToComplaints = new Intent(getApplicationContext(), ComplaintsList.class);
+            switch (view.getId()) {
+                case R.id.buttonsuspension2:
+                    dR.suspendCook(id, date);
+                    startActivity(returnToComplaints);
+                    break;
+                case R.id.buttonsuspension:
+                    dR.suspendCook(id, "Indefinite" );
+                    startActivity(returnToComplaints);
+                    break;
+
+        }
     }
 
     private Boolean verifyDate(String date) {
@@ -66,4 +87,5 @@ public class CookSuspension extends AppCompatActivity {
 
         return isValid;
     }
+
 }
