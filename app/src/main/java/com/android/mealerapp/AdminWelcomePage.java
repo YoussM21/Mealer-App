@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class AdminWelcomePage extends AppCompatActivity {
 
@@ -108,14 +109,14 @@ public class AdminWelcomePage extends AppCompatActivity {
         dialogBuilder.setView(dialogView);
 
 
-        final Button buttonSuspend = dialogView.findViewById(R.id.buttonSuspendCook);
+        final Button buttonSuspendCook = dialogView.findViewById(R.id.buttonSuspendCook);
         final Button buttonDelete = dialogView.findViewById(R.id.buttonDeleteComplaint);
 
         dialogBuilder.setTitle(cookName);
         final AlertDialog b = dialogBuilder.create();
         b.show();
 
-        buttonSuspend.setOnClickListener(new View.OnClickListener() {
+        buttonSuspendCook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent suspendCook = new Intent(getApplicationContext(),CookSuspension.class);

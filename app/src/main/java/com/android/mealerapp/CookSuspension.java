@@ -20,6 +20,9 @@ public class CookSuspension extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cook_suspension);
+    }
+
+    private void updateInfo (){
 
         Boolean isValid = false;
         EditText suspensionDate = (EditText) findViewById(R.id.suspensionDate);
