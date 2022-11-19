@@ -35,12 +35,12 @@ public class MenuEditor extends AppCompatActivity {
         buttonAddMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addProduct();
+                addMeal();
             }
         });
     }
 
-    private void addProduct() {
+    private void addMeal() {
 
         String name = editTextMealName.getText().toString().trim();
         String description = editTextMeal_Description.getText().toString().trim();

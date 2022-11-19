@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ import java.util.List;
 
 public class CookWelcomePage extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
     EditText editTextMealName;
     EditText editTextMeal_Description;
 
@@ -44,8 +46,6 @@ public class CookWelcomePage extends AppCompatActivity {
 
         meals = new ArrayList<>();
         listViewMenuItems = findViewById(R.id.listView_Menu);
-
-
 
         databaseMenuItems = FirebaseDatabase.getInstance().getReference("Meals");
 
@@ -90,10 +90,24 @@ public class CookWelcomePage extends AppCompatActivity {
 
         final Button buttonUpdate = dialogView.findViewById(R.id.Update_meal);
         final Button buttonDelete = dialogView.findViewById(R.id.Delete_meal);
+        final CheckBox buttonRecommend = dialogView.findViewById(R.id.checkBox);
 
         dialogBuilder.setTitle(MealName);
         final AlertDialog b = dialogBuilder.create();
         b.show();
+
+        buttonRecommend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseUser user = mAuth.getCurrentUser();
+
+                if (user != null){
+                    String id = user.getUid();
+
+                    DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Meals").child(id);
+                }
+            }
+        });
 
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,11 +130,11 @@ public class CookWelcomePage extends AppCompatActivity {
     }
 
     private void updateMeal(String id, String name, String description) {
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("meals").child(id);
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Meals").child(id);
         MenuItem meal = new MenuItem(name, description);
         dR.setValue(meal);
 
-        Toast.makeText(getApplicationContext(), "Product Updated", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Meal Updated", Toast.LENGTH_LONG).show();
     }
 
     private void deleteMeal(String id) {
