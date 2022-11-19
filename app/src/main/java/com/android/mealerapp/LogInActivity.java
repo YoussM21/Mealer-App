@@ -64,8 +64,14 @@ public class LogInActivity extends AppCompatActivity {
                                 DataSnapshot dataSnapshot = task.getResult();
                                 Account value = dataSnapshot.getValue(Account.class);
                                 if (value != null){
-                                    if (value.getRole().equals("CHEF")){
-                                        updateUI("CHEF");
+                                    if (value instanceof ChefAccount){
+                                        ChefAccount chef = (ChefAccount) value;
+                                        if (chef.isSuspended()){
+                                            suspendedCook();
+                                        }
+                                        else{
+                                            updateUI("CHEF");
+                                        }
                                     }
                                     else {
                                         updateUI("CLIENT");
@@ -106,6 +112,10 @@ public class LogInActivity extends AppCompatActivity {
 
     }
 
+    private void suspendedCook(){
+        Intent i = new Intent(getApplicationContext(), SuspendedCookPage.class);
+        startActivity(i);
+    }
     private void updateUI(String role){
         Intent i;
         if (role.equals("ADMIN")){

@@ -38,8 +38,14 @@ public class MainActivity extends AppCompatActivity {
                         DataSnapshot dataSnapshot = task.getResult();
                         Account value = dataSnapshot.getValue(Account.class);
                         if (value != null){
-                            if (value.getRole().equals("CHEF")){
-                                reload("CHEF");
+                            if (value instanceof ChefAccount){
+                                ChefAccount chef = (ChefAccount) value;
+                                if (chef.isSuspended()){
+                                    suspendedChef();
+                                }
+                                else{
+                                    reload("CHEF");
+                                }
                             }
                             else {
                                 reload("CLIENT");
@@ -71,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void suspendedChef(){
+
+    }
     private void reload(String role){
         Intent i;
         if (role.equals("ADMIN")){
