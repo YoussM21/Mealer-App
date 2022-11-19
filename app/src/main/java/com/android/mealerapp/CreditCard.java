@@ -6,7 +6,6 @@ public class CreditCard {
     private String creditCardDate;
     private int creditCardCVV;
 
-    public CreditCard(){}
 
     public CreditCard(String name, long num, String date, int cvv){
         nameOnCard = name;

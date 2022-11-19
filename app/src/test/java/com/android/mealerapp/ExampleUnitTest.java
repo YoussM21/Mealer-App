@@ -20,7 +20,7 @@ public class ExampleUnitTest {
         boolean actual;
 
         ChefAccount testChef = new ChefAccount("test","test","test","test","test","test","test");
-        Complaints testComplaint = new Complaints("test",testChef);
+        Complaint testComplaint = new Complaint("test",testChef);
 
         actual = testComplaint.getComplaint() != null;
         assertEquals(expected, actual);
@@ -28,7 +28,7 @@ public class ExampleUnitTest {
 
     public void getCookName_isCorrect(){
         ChefAccount testChef = new ChefAccount("test","name1","test","test","test","test","test");
-        Complaints testComplaint = new Complaints("test",testChef);
+        Complaint testComplaint = new Complaint("test",testChef);
         String expected = "name1";
         String actual = testComplaint.getCookName();
 

@@ -23,12 +23,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class AdminWelcomePage extends AppCompatActivity {
 
     ListView listViewComplaints;
 
-    List<Complaints> complaints;
+    List<Complaint> complaints;
     DatabaseReference databaseComplaints;
 
     Button logoutButton;
@@ -40,7 +41,6 @@ public class AdminWelcomePage extends AppCompatActivity {
 
         complaints = new ArrayList<>();
         listViewComplaints = findViewById(R.id.listViewComplaints);
-
 
 
         databaseComplaints = FirebaseDatabase.getInstance().getReference("Complaints");
@@ -57,13 +57,14 @@ public class AdminWelcomePage extends AppCompatActivity {
         listViewComplaints.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Complaints complaint = complaints.get(i);
-                showUpdateDeleteDialog(complaint.getComplaint(), complaint.getCookName());
+                Complaint complaint = complaints.get(i);
+                showUpdateDeleteDialog(complaint.getId(), complaint.getCookName());
                 return true;
             }
         });
 
     }
+
     protected void onStart() {
         super.onStart();
         databaseComplaints.addValueEventListener(new ValueEventListener() {
@@ -72,7 +73,7 @@ public class AdminWelcomePage extends AppCompatActivity {
                 complaints.clear();
 
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    Complaints complaint = postSnapshot.getValue(Complaints.class);
+                    Complaint complaint = postSnapshot.getValue(Complaint.class);
                     complaints.add(complaint);
                 }
 
@@ -86,20 +87,21 @@ public class AdminWelcomePage extends AppCompatActivity {
             }
         });
         /**
-        ChefAccount chef = new ChefAccount("ierYufw34","Thomas", "Jeffrey","tjeff@gmail.com","*Tmotew34","23 Street Way","Hello!");
-        Complaints cpl = new Complaints("Test complaint", chef);
-        String id = databaseComplaints.push().getKey();
-        databaseComplaints.child(id).setValue(cpl);**/
+         ChefAccount chef = new ChefAccount("ierYufw34","Thomas", "Jeffrey","tjeff@gmail.com","*Tmotew34","23 Street Way","Hello!");
+         Complaints cpl = new Complaints("Test complaint", chef);
+         String id = databaseComplaints.push().getKey();
+         cpl.setId(id);
+         databaseComplaints.child(id).setValue(cpl);*/
     }
 
-    public void onLogoutClick(){
+    public void onLogoutClick() {
         FirebaseAuth.getInstance().signOut();
         Intent intent1 = new Intent(getApplicationContext(), rolePage.class);
         startActivity(intent1);
 
     }
 
-    private void showUpdateDeleteDialog(final String complaint, String cook) {
+    private void showUpdateDeleteDialog(final String complaintId, String cookName) {
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
@@ -107,17 +109,17 @@ public class AdminWelcomePage extends AppCompatActivity {
         dialogBuilder.setView(dialogView);
 
 
-        final Button buttonSuspend = dialogView.findViewById(R.id.buttonSuspendCook);
+        final Button buttonSuspendCook = dialogView.findViewById(R.id.buttonSuspendCook);
         final Button buttonDelete = dialogView.findViewById(R.id.buttonDeleteComplaint);
 
-        dialogBuilder.setTitle(cook);
+        dialogBuilder.setTitle(cookName);
         final AlertDialog b = dialogBuilder.create();
         b.show();
 
-        buttonSuspend.setOnClickListener(new View.OnClickListener() {
+        buttonSuspendCook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent suspendCook = new Intent(getApplicationContext(),CookSuspension.class);
+                Intent suspendCook = new Intent(getApplicationContext(), CookSuspension.class);
                 startActivity(suspendCook);
             }
         });
@@ -125,23 +127,23 @@ public class AdminWelcomePage extends AppCompatActivity {
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteComplaints(complaint);
+                deleteComplaints(complaintId);
                 b.dismiss();
             }
         });
     }
 
-    private void SuspendCook (String id,ChefAccount name) {
+    public void suspendCook(String id, String suspensionDate) {
 
         DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
-        Complaints complaint = new Complaints (id, name);
-        dR.setValue(complaint);
+        dR.child("isSuspended").setValue(true);
+        dR.child("suspensionDate").setValue(suspensionDate);
 
         Toast.makeText(getApplicationContext(), "Complaint Updated", Toast.LENGTH_LONG).show();
     }
 
     private void deleteComplaints(String id) {
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Complaints").child(id);
         dR.removeValue();
 
         Toast.makeText(getApplicationContext(), "Complaint Deleted", Toast.LENGTH_LONG).show();

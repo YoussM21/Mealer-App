@@ -1,18 +1,27 @@
 package com.android.mealerapp;
 
 
-public class Complaints {
+public class Complaint {
         private ChefAccount _cook;
         private String _complaint;
+        private String id;
 
-        public Complaints(){}
+        public Complaint(){}
 
-        public Complaints(String complaint, ChefAccount cook){
+        public Complaint(String complaint, ChefAccount cook){
             this._complaint = complaint;
             this._cook = cook;
         }
 
-        public String getComplaint() {
+    public String getId() {
+            return id;
+    }
+
+    public void setId(String id) {
+            this.id = id;
+    }
+
+    public String getComplaint() {
             return _complaint;
         }
 
