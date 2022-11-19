@@ -38,14 +38,8 @@ public class MainActivity extends AppCompatActivity {
                         DataSnapshot dataSnapshot = task.getResult();
                         Account value = dataSnapshot.getValue(Account.class);
                         if (value != null){
-                            if (value instanceof ChefAccount){
-                                ChefAccount chef = (ChefAccount) value;
-                                if (chef.isSuspended()){
-                                    suspendedChef();
-                                }
-                                else{
-                                    reload("CHEF");
-                                }
+                            if (value.getRole().equals("CHEF")){
+                                reload("CHEF");
                             }
                             else {
                                 reload("CLIENT");
@@ -78,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void suspendedChef(){
-
+        Intent i = new Intent(getApplicationContext(), SuspendedCookPage.class);
+        startActivity(i);
     }
     private void reload(String role){
         Intent i;

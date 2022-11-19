@@ -64,14 +64,8 @@ public class LogInActivity extends AppCompatActivity {
                                 DataSnapshot dataSnapshot = task.getResult();
                                 Account value = dataSnapshot.getValue(Account.class);
                                 if (value != null){
-                                    if (value instanceof ChefAccount){
-                                        ChefAccount chef = (ChefAccount) value;
-                                        if (chef.isSuspended()){
-                                            suspendedCook();
-                                        }
-                                        else{
-                                            updateUI("CHEF");
-                                        }
+                                    if (value.getRole().equals("CHEF")){
+                                        updateUI("CHEF");
                                     }
                                     else {
                                         updateUI("CLIENT");

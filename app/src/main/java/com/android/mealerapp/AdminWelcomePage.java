@@ -89,12 +89,12 @@ public class AdminWelcomePage extends AppCompatActivity {
 
             }
         });
-
+        /**
          ChefAccount chef = new ChefAccount("hZJ2CmbKoqbdo27Ozdct65qv1KF2","Toma", "Jeff","tjeff@gmail.com","#tomato123","23 Street Way","Hello!");
          Complaint cpl = new Complaint("Test complaint", chef);
          String id = databaseComplaints.push().getKey();
          cpl.setId(id);
-         databaseComplaints.child(id).setValue(cpl);
+         databaseComplaints.child(id).setValue(cpl);*/
     }
 
     public void onLogoutClick() {
