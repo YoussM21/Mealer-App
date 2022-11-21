@@ -39,10 +39,18 @@ public class MainActivity extends AppCompatActivity {
                         Account value = dataSnapshot.getValue(Account.class);
                         if (value != null){
                             if (value.getRole().equals("CHEF")){
-                                reload("CHEF");
+                                if (value.isBanned()){
+                                    suspendedChef();
+                                }
+                                else {
+                                    reload("CHEF");
+                                }
+                            }
+                            else if(value.getRole().equals("CLIENT")){
+                                reload("CLIENT");
                             }
                             else {
-                                reload("CLIENT");
+                                Toast.makeText(MainActivity.this, "Invalid user.", Toast.LENGTH_SHORT).show();
                             }
                         }
 

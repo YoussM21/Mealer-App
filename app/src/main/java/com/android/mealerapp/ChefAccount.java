@@ -3,7 +3,6 @@ package com.android.mealerapp;
 public class ChefAccount extends Account{
 
     private String description, suspensionDate;
-    private boolean isSuspended;
 
     public ChefAccount(){}
 
@@ -11,7 +10,6 @@ public class ChefAccount extends Account{
         super(id,"CHEF", name, lastName, email, pswd, address);
         this.description = description;
         suspensionDate = "Invalid";
-        isSuspended = false;
     }
 
 
@@ -22,15 +20,6 @@ public class ChefAccount extends Account{
     public void setSuspensionDate(String suspensionDate) {
         this.suspensionDate = suspensionDate;
     }
-
-    public boolean isSuspended() {
-        return isSuspended;
-    }
-
-    public void setSuspended(boolean suspended) {
-        isSuspended = suspended;
-    }
-
 
     public String getDescription() {
         return description;

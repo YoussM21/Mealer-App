@@ -50,7 +50,7 @@ public class PaymentInfoActivity extends AppCompatActivity {
                 client = firebaseAuth.getCurrentUser();
                 if(client != null){
                     String id = client.getUid();
-                    UserAccount clientAccount;
+                    Account clientAccount;
                     clientAccount = new UserAccount(id, data.getString("NAME"), data.getString("LAST_NAME"),
                             data.getString("EMAIL"), data.getString("PSWD"), data.getString("ADDRESS"), card);
                     databaseUsers.child(id).setValue(clientAccount);

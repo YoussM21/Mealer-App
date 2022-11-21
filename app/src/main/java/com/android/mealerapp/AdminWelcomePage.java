@@ -90,7 +90,7 @@ public class AdminWelcomePage extends AppCompatActivity {
             }
         });
         /**
-         ChefAccount chef = new ChefAccount("hZJ2CmbKoqbdo27Ozdct65qv1KF2","Toma", "Jeff","tjeff@gmail.com","#tomato123","23 Street Way","Hello!");
+         ChefAccount chef = new ChefAccount("53n8O8RjLzd1CoGoSrYhz9JDqg52","Toma", "Jeff","tjeff@gmail.com","#tomato123","23 Street Way","Hello!");
          Complaint cpl = new Complaint("Test complaint", chef);
          String id = databaseComplaints.push().getKey();
          cpl.setId(id);
@@ -162,7 +162,7 @@ public class AdminWelcomePage extends AppCompatActivity {
 
                     DatabaseReference databaseChef = FirebaseDatabase.getInstance().getReference("Users").child(cookID);
                     HashMap<String, Object> result = new HashMap<>();
-                    result.put("suspended", true);
+                    result.put("banned", true);
                     result.put("suspensionDate", suspensionDate);
                     databaseChef.updateChildren(result);
                 }
