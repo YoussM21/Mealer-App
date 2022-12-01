@@ -4,60 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#023047"
+    android:background="#5B8CA3"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/Loggedin_as..."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jomhuria"
-        android:text="@string/you_re_logged_in_as"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.383"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
-
-    <TextView
-        android:id="@+id/identity_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jomhuria"
-        android:text="@string/client"
-        android:textColor="#FFB703"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.747"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
-
     <ImageView
-        android:id="@+id/foodicons2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/rectangle8"
+        android:layout_width="471dp"
+        android:layout_height="763dp"
+        android:layout_marginTop="85dp"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/food_icons" />
+        app:layout_constraintVertical_bias="0.205"
+        app:srcCompat="@drawable/rectangle2" />
 
-    <ImageView
-        android:id="@+id/upper_line2"
+    <TextView
+        android:id="@+id/identification3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        android:layout_marginStart="299dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="661dp"
+        android:fontFamily="@font/jomhuria"
+        android:text="Client"
+        android:textColor="#FFEB3B"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/upper_vector" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/silhouette3"
+        android:layout_width="45dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="676dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/male_silhouette" />
+
+    <ImageView
+        android:id="@+id/logo4"
+        android:layout_width="167dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="668dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/bottom_line2"
@@ -70,16 +77,16 @@
         app:srcCompat="@drawable/bottom_vector" />
 
     <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/app_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/foodicons2"
+        android:layout_width="363dp"
+        android:layout_height="681dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247"
-        app:srcCompat="@drawable/logo2" />
+        app:srcCompat="@drawable/food_icons" />
 
     <Button
         android:id="@+id/logout_button"
@@ -90,9 +97,25 @@
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintVertical_bias="0.948" />
 
+    <TextView
+        android:id="@+id/Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="583dp"
+        android:fontFamily="@font/jomhuria"
+        android:text="Order"
+        android:textColor="#FB8500"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
