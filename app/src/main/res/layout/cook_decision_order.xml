@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#023047">
+
+    <TextView
+        android:id="@+id/textView_Meal_name2"
+        android:layout_width="374dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="632dp"
+        android:fontFamily="@font/jomhuria"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:layout_width="374dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Client_Name"
+        android:layout_width="374dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="538dp"
+        android:fontFamily="@font/jomhuria"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/accept_meal"
+        android:layout_width="157dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginEnd="234dp"
+        android:layout_marginBottom="452dp"
+        android:text="Accept"
+        android:textSize="16sp"
+        app:backgroundTint="#FB8500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reject_meal"
+        android:layout_width="157dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="452dp"
+        android:text="Reject"
+        android:textSize="16sp"
+        app:backgroundTint="#FB8500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
