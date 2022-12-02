@@ -73,23 +73,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/logout_button3"
-        android:layout_width="238dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="661dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="onLogoutClick_3"
-        android:text="LOG OUT"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="#FB8500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/identification2"
         android:layout_width="wrap_content"
@@ -181,7 +164,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/CartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="331dp"
@@ -194,5 +177,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shopping_cart" />
+
+    <Button
+        android:id="@+id/logout_button3"
+        android:layout_width="238dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="661dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onLogoutClick_3"
+        android:text="LOG OUT"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#FB8500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
