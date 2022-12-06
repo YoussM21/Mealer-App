@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.zip.Inflater;
 
@@ -87,8 +90,8 @@ public class AdminWelcomePage extends AppCompatActivity {
             }
         });
         /**
-         ChefAccount chef = new ChefAccount("ierYufw34","Thomas", "Jeffrey","tjeff@gmail.com","*Tmotew34","23 Street Way","Hello!");
-         Complaints cpl = new Complaints("Test complaint", chef);
+         ChefAccount chef = new ChefAccount("53n8O8RjLzd1CoGoSrYhz9JDqg52","Toma", "Jeff","tjeff@gmail.com","#tomato123","23 Street Way","Hello!");
+         Complaint cpl = new Complaint("Test complaint", chef);
          String id = databaseComplaints.push().getKey();
          cpl.setId(id);
          databaseComplaints.child(id).setValue(cpl);*/
@@ -120,7 +123,9 @@ public class AdminWelcomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent suspendCook = new Intent(getApplicationContext(), CookSuspension.class);
-                startActivity(suspendCook);
+                suspendCook.putExtra("ID",complaintId);
+                startActivityForResult(suspendCook,0);
+                b.dismiss();
             }
         });
 
@@ -133,12 +138,39 @@ public class AdminWelcomePage extends AppCompatActivity {
         });
     }
 
-    public void suspendCook(String id, String suspensionDate) {
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("complaints").child(id);
-        dR.child("isSuspended").setValue(true);
-        dR.child("suspensionDate").setValue(suspensionDate);
+        String complaintID = data.getStringExtra("Id");
+        String length = data.getStringExtra("Suspension_Length");
 
+        suspendCook(complaintID, length);
+
+    }
+
+    private void suspendCook(String id, String suspensionDate) {
+        Toast.makeText(getApplicationContext(), id, Toast.LENGTH_LONG).show();
+        databaseComplaints.child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                DataSnapshot dataSnapshot = task.getResult();
+                Complaint complaint = dataSnapshot.getValue(Complaint.class);
+
+                if (complaint != null){
+                    String cookID = complaint.get_cook().getId();
+
+                    DatabaseReference databaseChef = FirebaseDatabase.getInstance().getReference("Users").child(cookID);
+                    HashMap<String, Object> result = new HashMap<>();
+                    result.put("banned", true);
+                    result.put("suspensionDate", suspensionDate);
+                    databaseChef.updateChildren(result);
+                }
+            }
+        });
+
+
+        deleteComplaints(id);
         Toast.makeText(getApplicationContext(), "Complaint Updated", Toast.LENGTH_LONG).show();
     }
 

@@ -4,26 +4,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CookWelcomePage extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
     EditText editTextMealName;
     EditText editTextMeal_Description;
 
@@ -45,8 +52,6 @@ public class CookWelcomePage extends AppCompatActivity {
         meals = new ArrayList<>();
         listViewMenuItems = findViewById(R.id.listView_Menu);
 
-
-
         databaseMenuItems = FirebaseDatabase.getInstance().getReference("Meals");
 
         logoutButton = findViewById(R.id.logout_button3);
@@ -67,6 +72,29 @@ public class CookWelcomePage extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        databaseMenuItems.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                meals.clear();
+
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                    MenuItem meal = postSnapshot.getValue(MenuItem.class);
+                    meals.add(meal);
+                }
+
+                MenuItemList mealsAdapter = new MenuItemList(CookWelcomePage.this,meals);
+                listViewMenuItems.setAdapter(mealsAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     public void onNewMealClick(View view){
@@ -90,10 +118,24 @@ public class CookWelcomePage extends AppCompatActivity {
 
         final Button buttonUpdate = dialogView.findViewById(R.id.Update_meal);
         final Button buttonDelete = dialogView.findViewById(R.id.Delete_meal);
+        final CheckBox buttonRecommend = dialogView.findViewById(R.id.checkBox);
 
         dialogBuilder.setTitle(MealName);
         final AlertDialog b = dialogBuilder.create();
         b.show();
+
+        buttonRecommend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseUser user = mAuth.getCurrentUser();
+
+                if (user != null){
+                    String id = user.getUid();
+
+                    DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Meals").child(id);
+                }
+            }
+        });
 
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,11 +158,11 @@ public class CookWelcomePage extends AppCompatActivity {
     }
 
     private void updateMeal(String id, String name, String description) {
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("meals").child(id);
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Meals").child(id);
         MenuItem meal = new MenuItem(name, description);
         dR.setValue(meal);
 
-        Toast.makeText(getApplicationContext(), "Product Updated", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Meal Updated", Toast.LENGTH_LONG).show();
     }
 
     private void deleteMeal(String id) {

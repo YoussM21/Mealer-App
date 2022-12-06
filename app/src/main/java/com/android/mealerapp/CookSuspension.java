@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,50 +15,61 @@ import com.google.firebase.database.DatabaseReference;
 
 public class CookSuspension extends AppCompatActivity {
 
-    ChefAccount _cook;
-    String _complaints;
-    private String date;
+
     private String id;
 
-
+    Button PermanentSuspension;
+    Button TemporarySuspension;
+    EditText suspensionDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cook_suspension);
 
-        Boolean isValid = false;
-        EditText suspensionDate = (EditText) findViewById(R.id.suspensionDate);
+        suspensionDate = (EditText) findViewById(R.id.suspensionDate);
+        Intent currentIntent = getIntent();
 
-        while (!isValid) {
-            date = suspensionDate.getText().toString();
+        id = currentIntent.getStringExtra("ID");
 
-            isValid = verifyDate(date);
-            if (!isValid) {
-                Toast.makeText(getApplicationContext(), "Invalid date", Toast.LENGTH_SHORT).show();
+
+        PermanentSuspension = findViewById(R.id.buttonsuspension2);
+        PermanentSuspension.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                suspension("Indefinite");
             }
-        }
+        });
 
-        Button PermanentSuspension = findViewById(R.id.buttonsuspension2);
-        PermanentSuspension.setOnClickListener((View.OnClickListener) this);
-        Button TemporarySuspension = findViewById(R.id.buttonsuspension);
-        TemporarySuspension.setOnClickListener((View.OnClickListener) this);
+        TemporarySuspension = findViewById(R.id.buttonsuspension);
+        TemporarySuspension.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String date = suspensionDate.getText().toString();
+                if (!TextUtils.isEmpty(date)){
+                    if (verifyDate(date)){
+                        suspension(date);
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "Invalid date", Toast.LENGTH_LONG).show();
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Please enter a date", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
     }
-            public void onClick(View view) {
-            AdminWelcomePage dR = new AdminWelcomePage();
-            Intent returnToComplaints = new Intent(getApplicationContext(), ComplaintsList.class);
-            switch (view.getId()) {
-                case R.id.buttonsuspension2:
-                    dR.suspendCook(id, date);
-                    startActivity(returnToComplaints);
-                    break;
-                case R.id.buttonsuspension:
-                    dR.suspendCook(id, "Indefinite" );
-                    startActivity(returnToComplaints);
-                    break;
+    public void suspension(String length) {
+        Intent returnToComplaints = new Intent(getApplicationContext(), ComplaintsList.class);
 
-        }
+        returnToComplaints.putExtra("Id",id);
+        returnToComplaints.putExtra("Suspension_Length",length);
+        setResult(RESULT_OK, returnToComplaints);
+        finish();
+
+
     }
 
     private Boolean verifyDate(String date) {
@@ -70,7 +82,7 @@ public class CookSuspension extends AppCompatActivity {
 
         try {
             m = Integer.parseInt(date.substring(0, 2));
-            d = Integer.parseInt(date.substring(4, 6));
+            d = Integer.parseInt(date.substring(3, 5));
             y = Integer.parseInt(date.substring(6));
         }
         catch(Exception e){

@@ -3,6 +3,7 @@ package com.android.mealerapp;
 public class Account {
 
     protected String id, role,  name, lastName, email, pswd, address;
+    protected boolean isBanned;
 
 
     public Account(){ }
@@ -15,12 +16,15 @@ public class Account {
         this.email = email;
         this.pswd = pswd;
         this.address = address;
+        isBanned = false;
 
     }
 
     public String getRole() {return role;}
     public void setId(String id) {this.id = id;}
     public String getId() {return id;}
+    public boolean isBanned() {return isBanned;}
+    public void setBanned(boolean banned) {isBanned = banned;}
     public void setName(String name1) {
         name = name1;
     }

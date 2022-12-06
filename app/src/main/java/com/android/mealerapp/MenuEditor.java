@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MenuEditor extends AppCompatActivity {
 
@@ -26,6 +27,8 @@ public class MenuEditor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_meal_page);
 
+        databaseMeals = FirebaseDatabase.getInstance().getReference("Meals");
+
         editTextMealName = findViewById(R.id.editTextMealName);
         editTextMeal_Description = findViewById(R.id.editTextMeal_Description);
         Recommend_Button = findViewById(R.id.Recommend_button);
@@ -35,12 +38,12 @@ public class MenuEditor extends AppCompatActivity {
         buttonAddMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addProduct();
+                addMeal();
             }
         });
     }
 
-    private void addProduct() {
+    private void addMeal() {
 
         String name = editTextMealName.getText().toString().trim();
         String description = editTextMeal_Description.getText().toString().trim();

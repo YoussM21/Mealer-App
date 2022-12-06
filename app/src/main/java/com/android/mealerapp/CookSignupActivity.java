@@ -29,7 +29,7 @@ public class CookSignupActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser chef;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private ChefAccount chefAccount;
+    private Account chefAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

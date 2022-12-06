@@ -39,10 +39,18 @@ public class MainActivity extends AppCompatActivity {
                         Account value = dataSnapshot.getValue(Account.class);
                         if (value != null){
                             if (value.getRole().equals("CHEF")){
-                                reload("CHEF");
+                                if (value.isBanned()){
+                                    suspendedChef();
+                                }
+                                else {
+                                    reload("CHEF");
+                                }
+                            }
+                            else if(value.getRole().equals("CLIENT")){
+                                reload("CLIENT");
                             }
                             else {
-                                reload("CLIENT");
+                                Toast.makeText(MainActivity.this, "Invalid user.", Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -71,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void suspendedChef(){
+        Intent i = new Intent(getApplicationContext(), SuspendedCookPage.class);
+        startActivity(i);
+    }
     private void reload(String role){
         Intent i;
         if (role.equals("ADMIN")){

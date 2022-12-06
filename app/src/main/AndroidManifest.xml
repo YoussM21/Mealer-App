@@ -62,6 +62,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".MenuEditor"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SuspendedCookPage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".rolePage"
             android:exported="false">
             <meta-data
