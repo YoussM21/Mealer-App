@@ -18,23 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buy_meal_button"
-        android:layout_width="160dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="330dp"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="331dp"
-        android:text="Add to Bag"
-        app:backgroundTint="#FB8500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/textView_MealName"
+        android:id="@+id/textView_Meal_Name"
         android:layout_width="375dp"
         android:layout_height="48dp"
         android:layout_marginStart="18dp"
@@ -50,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_MealDescription"
+        android:id="@+id/textView_MealDesc"
         android:layout_width="375dp"
         android:layout_height="150dp"
         android:layout_marginStart="18dp"
@@ -60,6 +45,36 @@
         android:fontFamily="@font/jomhuria"
         android:textColor="@color/white"
         android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="157dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="331dp"
+        android:text="Remove"
+        app:backgroundTint="#FB8500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/keep_button"
+        android:layout_width="157dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginEnd="234dp"
+        android:layout_marginBottom="331dp"
+        android:text="keep"
+        app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
