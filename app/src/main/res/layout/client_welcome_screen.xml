@@ -178,7 +178,7 @@
         android:layout_width="238dp"
         android:layout_height="54dp"
         android:layout_marginTop="-150dp"
-        android:onClick="onLogoutClick_3"
+        android:onClick="onLogoutClick_4"
         android:text="LOG OUT"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
