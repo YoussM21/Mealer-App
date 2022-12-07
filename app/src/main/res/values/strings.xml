@@ -18,4 +18,7 @@
     <string name="choose_suspension_date">Choose suspension date</string>
     <string name="permanent_suspension">Permanent Suspension</string>
     <string name="temporary_suspension">Temporary Suspension</string>
+    <string name="Cart_button" />
+    <string name="CartButton">Cart</string>
+    <string name="BagButton">Bag</string>
 </resources>

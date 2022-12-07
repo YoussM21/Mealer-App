@@ -6,45 +6,6 @@
     android:layout_height="match_parent"
     android:background="#023047">
 
-    <CheckBox
-        android:id="@+id/Recommend_button"
-        android:layout_width="192dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="261dp"
-        android:layout_marginEnd="201dp"
-        android:layout_marginBottom="422dp"
-        android:fontFamily="@font/jomhuria"
-        android:text="Recommend this meal"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextMealName"
-        android:layout_width="375dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="632dp"
-        android:ems="10"
-        android:fontFamily="@font/jomhuria"
-        android:hint="Meal Name"
-        android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Space
         android:layout_width="374dp"
         android:layout_height="47dp"
@@ -57,21 +18,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextMeal_Description"
+    <TextView
+        android:id="@+id/textView_MealName"
         android:layout_width="375dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="151dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="475dp"
-        android:ems="10"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="632dp"
         android:fontFamily="@font/jomhuria"
-        android:hint="Description"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_MealDescription"
+        android:layout_width="375dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="428dp"
+        android:fontFamily="@font/jomhuria"
+        android:textColor="@color/white"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,19 +51,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Addbutton"
+        android:id="@+id/add_meal_button"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginStart="125dp"
         android:layout_marginTop="330dp"
         android:layout_marginEnd="126dp"
         android:layout_marginBottom="331dp"
-        android:text="Add Meal"
-        android:textSize="16sp"
+        android:text="Add to Bag"
         app:backgroundTint="#FB8500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

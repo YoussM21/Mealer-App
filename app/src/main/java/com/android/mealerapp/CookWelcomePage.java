@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -71,7 +70,6 @@ public class CookWelcomePage extends AppCompatActivity {
                 return true;
             }
         });
-
     }
     @Override
     protected void onStart() {
@@ -95,6 +93,11 @@ public class CookWelcomePage extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void onCartClick(View view){
+        Intent intent3 = new Intent(getApplicationContext(), MyBag.class);
+        startActivity(intent3);
     }
 
     public void onNewMealClick(View view){

@@ -144,7 +144,6 @@
                 android:layout_height="530dp"
                 android:layout_gravity="center_vertical"
                 android:background="@color/white"
-                android:divider="#5B8CA3"
                 android:dividerHeight="1dp"
                 android:textColor="@color/white" />
         </LinearLayout>
