@@ -154,6 +154,7 @@
         android:layout_marginBottom="570dp"
         android:background="@color/cardview_shadow_end_color"
         android:contentDescription="@string/BagButton"
+        android:onClick="onBagClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

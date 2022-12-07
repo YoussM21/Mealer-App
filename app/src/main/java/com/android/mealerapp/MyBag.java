@@ -10,21 +10,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ClientWelcomePage extends AppCompatActivity {
+public class MyBag extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser clientUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.client_welcome_screen);
+        setContentView(R.layout.client_bag_page);
 
         mAuth = FirebaseAuth.getInstance();
         clientUser = mAuth.getCurrentUser();
     }
 
     @Override
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
         FirebaseAuth.AuthStateListener mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -35,15 +35,8 @@ public class ClientWelcomePage extends AppCompatActivity {
         mAuth.addAuthStateListener(mAuthListener);
     }
 
-    public void onBagClick(View view){
-        Intent intent1 = new Intent(getApplicationContext(), MyBag.class);
+    public void onBuyClick(View view){
+        Intent intent1 = new Intent(getApplicationContext(),ClientWelcomePage.class);
         startActivity(intent1);
     }
-
-    public void onLogoutClick_3(View view){
-        mAuth.signOut();
-        Intent intent2 = new Intent(getApplicationContext(), rolePage.class);
-        startActivity(intent2);
-    }
-
 }
