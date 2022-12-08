@@ -13,11 +13,9 @@ public class Demand {
         this._item = item;
     }
 
-    public void denyDemand(Demand demand) {
-        this.approved = false;
-    }
-    public void acceptDemand(Demand demand){
-        this.approved = true;
+    //this here gives the option to accept or decline the demand
+    public void set_approved(boolean approved){
+        this.approved = approved;
     }
     public boolean get_approved(){
         return approved;
