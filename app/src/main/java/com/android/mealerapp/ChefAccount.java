@@ -1,8 +1,12 @@
 package com.android.mealerapp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChefAccount extends Account{
 
     private String description, suspensionDate;
+    private List<MenuItem> meals;
 
     public ChefAccount(){}
 
@@ -10,9 +14,16 @@ public class ChefAccount extends Account{
         super(id,"CHEF", name, lastName, email, pswd, address);
         this.description = description;
         suspensionDate = "Invalid";
+        meals = new ArrayList<MenuItem>();
     }
 
+    public void addMeal(MenuItem meal){
+        meals.add(meal);
+    }
 
+    public MenuItem getMeal(int index){
+        return meals.get(index);
+    }
     public String getSuspensionDate() {
         return suspensionDate;
     }

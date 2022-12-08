@@ -6,37 +6,40 @@
     android:layout_height="match_parent"
     android:background="#023047">
 
-    <TextView
+    <EditText
         android:id="@+id/textView_Meal_name"
-        android:layout_width="374dp"
-        android:layout_height="47dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="632dp"
         android:fontFamily="@font/jomhuria"
+        android:hint="Update Name"
         android:textColor="@color/white"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
-    <TextView
+    <EditText
         android:id="@+id/TextView_Meal_description"
-        android:layout_width="374dp"
-        android:layout_height="95dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="158dp"
         android:layout_marginEnd="21dp"
-        android:layout_marginBottom="478dp"
         android:fontFamily="@font/jomhuria"
+        android:hint="Update Description"
         android:textColor="@color/white"
+        android:textColorHint="#607D8B"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <Space
         android:layout_width="374dp"
@@ -48,49 +51,47 @@
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="192dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginTop="261dp"
         android:layout_marginEnd="201dp"
-        android:layout_marginBottom="422dp"
         android:fontFamily="@font/jomhuria"
         android:text="Recommend this meal"
         android:textColor="@color/white"
         android:textSize="26sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Update_meal"
-        android:layout_width="157dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="234dp"
         android:layout_marginBottom="322dp"
         android:text="Update Meal"
+        android:textColor="#4E342E"
         android:textSize="16sp"
         app:backgroundTint="#FB8500"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Delete_meal"
-        android:layout_width="157dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="234dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="322dp"
         android:text="Delete Meal"
+        android:textColor="#4E342E"
         android:textSize="16sp"
         app:backgroundTint="#FB8500"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

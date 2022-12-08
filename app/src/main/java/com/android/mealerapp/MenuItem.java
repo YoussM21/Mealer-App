@@ -5,15 +5,26 @@ public class MenuItem {
     private String _meal;
     private String _description;
     private Boolean _recommend;
+    private String id;
+    private ChefAccount cook;
 
 
     public MenuItem(){}
 
-    public MenuItem(String meal, String description){
+    public MenuItem(ChefAccount cook, String meal, String description){
         this._meal = meal;
         this._description = description;
         _recommend = false;
+        this.cook = cook;
     }
+
+    public ChefAccount getCook() {return cook;}
+
+    public void setCook(ChefAccount cook) {this.cook = cook;}
+
+    public String getId() {return id;}
+
+    public void setId(String id) {this.id = id;}
 
     public String getMeal() {
         return _meal;
