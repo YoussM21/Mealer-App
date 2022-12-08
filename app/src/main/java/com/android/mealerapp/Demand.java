@@ -24,6 +24,9 @@ public class Demand {
     public ChefAccount get_cook(){
         return _cook;
     }
+    public String getCookName(){
+        return _cook.getName();
+    }
     public void set_cook(ChefAccount cook){
         this._cook = cook;
     }
