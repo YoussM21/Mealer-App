@@ -19,4 +19,7 @@
     <string name="permanent_suspension">Permanent Suspension</string>
     <string name="temporary_suspension">Temporary Suspension</string>
     <string name="search_hint">Search for a meal...</string>
+    <string name="Cart_button" />
+    <string name="CartButton">Cart</string>
+    <string name="BagButton">Bag</string>
 </resources>
