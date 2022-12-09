@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -25,6 +26,7 @@ import java.util.List;
 public class ClientWelcomePage extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser clientUser;
+    SearchView searchMeal;
 
     ListView listViewMenu;
 
@@ -63,6 +65,8 @@ public class ClientWelcomePage extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         clientUser = mAuth.getCurrentUser();
+
+        searchMeal = findViewById(R.id.search_Meal);
     }
 
     @Override

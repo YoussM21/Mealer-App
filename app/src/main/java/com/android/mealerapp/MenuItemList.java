@@ -22,7 +22,7 @@ public class MenuItemList extends ArrayAdapter<MenuItem> {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = context.getLayoutInflater();
-            View listViewItem = inflater.inflate(R.layout.layout_complaints_list, null, true);
+            View listViewItem = inflater.inflate(R.layout.layout_complaints_list, parent, false);
 
             TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
             TextView textViewDescription = (TextView) listViewItem.findViewById(R.id.textViewDescription);
@@ -31,9 +31,9 @@ public class MenuItemList extends ArrayAdapter<MenuItem> {
             textViewName.setText(meal.getMeal());
 
             if (meal.get_recommend())
-                textViewDescription.setText("Recommended");
+                textViewDescription.setText(meal.getDescription()+"(Recommended)");
             else
-                textViewDescription.setText("");
+                textViewDescription.setText(meal.getDescription());
 
             return listViewItem;
         }

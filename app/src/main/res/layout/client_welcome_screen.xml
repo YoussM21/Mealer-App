@@ -159,9 +159,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/shopping_bag" />
+        app:srcCompat="@drawable/shopping_bag"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <SearchView
+        android:id="@+id/search_Meal"
         android:layout_width="310dp"
         android:layout_height="39dp"
         android:layout_marginStart="6dp"
