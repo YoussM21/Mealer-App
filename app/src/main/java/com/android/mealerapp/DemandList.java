@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//livrable 4
+
 public class DemandList extends ArrayAdapter<Demand> {
     private Activity context;
     List<Demand> demands;
