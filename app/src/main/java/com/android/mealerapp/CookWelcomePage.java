@@ -34,7 +34,7 @@ public class CookWelcomePage extends AppCompatActivity {
 
     ListView listViewMenuItems;
 
-    List<MenuItem> meals;
+    List<Meal> meals;
     DatabaseReference databaseMenuItems;
     private FirebaseUser user;
 
@@ -65,8 +65,8 @@ public class CookWelcomePage extends AppCompatActivity {
         listViewMenuItems.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MenuItem meal = meals.get(i);
-                showUpdateDeleteDialog(meal.getId(), meal.getMeal());
+                Meal meal = meals.get(i);
+                showUpdateDeleteDialog(meal.getId(), meal.get_mealName());
                 return true;
             }
         });
@@ -80,7 +80,7 @@ public class CookWelcomePage extends AppCompatActivity {
                 meals.clear();
 
                 for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-                    MenuItem meal = postSnapshot.getValue(MenuItem.class);
+                    Meal meal = postSnapshot.getValue(Meal.class);
                     assert meal != null;
                     String id = meal.getCook().getId();
                     if (id.equals(user.getUid())){
@@ -88,7 +88,7 @@ public class CookWelcomePage extends AppCompatActivity {
                     }
                 }
 
-                MenuItemList mealsAdapter = new MenuItemList(CookWelcomePage.this,meals);
+                MealsList mealsAdapter = new MealsList(CookWelcomePage.this,meals);
                 listViewMenuItems.setAdapter(mealsAdapter);
             }
 
@@ -169,11 +169,11 @@ public class CookWelcomePage extends AppCompatActivity {
             @Override
             public void run() {
                 DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Meals").child(id);
-                for (MenuItem m : meals) {
+                for (Meal m : meals) {
                     if (m.getId().equals(id)){
                         ChefAccount cook = m.getCook();
 
-                        MenuItem meal = new MenuItem(cook, name, description);
+                        Meal meal = new Meal(cook, name, description);
                         meal.set_recommend(recommend);
                         meal.setId(id);
                         dR.setValue(meal);

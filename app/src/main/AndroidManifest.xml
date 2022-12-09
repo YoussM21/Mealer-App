@@ -29,12 +29,9 @@
         <activity
             android:name=".ClientWelcomePage"
             android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
             <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
             android:name=".CookWelcomePage"

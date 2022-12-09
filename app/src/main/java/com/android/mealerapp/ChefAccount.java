@@ -6,7 +6,7 @@ import java.util.List;
 public class ChefAccount extends Account{
 
     private String description, suspensionDate;
-    private List<MenuItem> meals;
+    private List<Meal> meals;
 
     public ChefAccount(){}
 
@@ -14,14 +14,14 @@ public class ChefAccount extends Account{
         super(id,"CHEF", name, lastName, email, pswd, address);
         this.description = description;
         suspensionDate = "Invalid";
-        meals = new ArrayList<MenuItem>();
+        meals = new ArrayList<Meal>();
     }
 
-    public void addMeal(MenuItem meal){
+    public void addMeal(Meal meal){
         meals.add(meal);
     }
 
-    public MenuItem getMeal(int index){
+    public Meal getMeal(int index){
         return meals.get(index);
     }
     public String getSuspensionDate() {

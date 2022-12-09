@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
@@ -73,7 +72,7 @@ public class MenuEditor extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<ChefAccount> task) {
                     ChefAccount cook = task.getResult();
-                    MenuItem meal = new MenuItem(cook, name, description);
+                    Meal meal = new Meal(cook, name, description);
                     meal.setId(id);
                     if (recommend){
                         meal.set_recommend(true);

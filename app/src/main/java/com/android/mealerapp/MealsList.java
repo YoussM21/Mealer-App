@@ -9,11 +9,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class MenuItemList extends ArrayAdapter<MenuItem> {
+public class MealsList extends ArrayAdapter<Meal> {
         private Activity context;
-        List<MenuItem> Meals;
+        List<Meal> Meals;
 
-        public MenuItemList (Activity context, List<MenuItem> Meals) {
+        public MealsList(Activity context, List<Meal> Meals) {
             super(context, R.layout.layout_complaints_list, Meals);
             this.context = context;
             this.Meals = Meals;
@@ -27,8 +27,8 @@ public class MenuItemList extends ArrayAdapter<MenuItem> {
             TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
             TextView textViewDescription = (TextView) listViewItem.findViewById(R.id.textViewDescription);
 
-            MenuItem meal = Meals.get(position);
-            textViewName.setText(meal.getMeal());
+            Meal meal = Meals.get(position);
+            textViewName.setText(meal.get_mealName());
 
             if (meal.get_recommend())
                 textViewDescription.setText(meal.getDescription()+"(Recommended)");

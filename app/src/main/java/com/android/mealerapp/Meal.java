@@ -1,18 +1,18 @@
 package com.android.mealerapp;
 
 
-public class MenuItem {
-    private String _meal;
+public class Meal {
+    private String _mealName;
     private String _description;
     private Boolean _recommend;
     private String id;
     private ChefAccount cook;
 
 
-    public MenuItem(){}
+    public Meal(){}
 
-    public MenuItem(ChefAccount cook, String meal, String description){
-        this._meal = meal;
+    public Meal(ChefAccount cook, String mealName, String description){
+        this._mealName = mealName;
         this._description = description;
         _recommend = false;
         this.cook = cook;
@@ -26,12 +26,12 @@ public class MenuItem {
 
     public void setId(String id) {this.id = id;}
 
-    public String getMeal() {
-        return _meal;
+    public String get_mealName() {
+        return _mealName;
     }
 
-    public void setMeal(String meal) {
-        this._meal = meal;
+    public void set_mealName(String meal) {
+        this._mealName = meal;
     }
 
     public String getDescription() {

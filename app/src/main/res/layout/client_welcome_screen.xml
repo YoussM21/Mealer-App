@@ -7,6 +7,32 @@
     android:background="#5B8CA3"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="?attr/colorPrimary">
+
+        <SearchView
+            android:id="@+id/search_Meal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:queryHint="Search for a meal..." />
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/rectangle8"
         android:layout_width="471dp"
@@ -59,6 +85,7 @@
         android:text="Client"
         android:textColor="#FFEB3B"
         android:textSize="30sp"
+        android:translationY="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +112,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="244dp"
         android:layout_marginBottom="668dp"
+        android:translationY="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -161,19 +189,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/shopping_bag"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <SearchView
-        android:id="@+id/search_Meal"
-        android:layout_width="310dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="122dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="571dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/logout_button"
