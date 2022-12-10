@@ -15,6 +15,7 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 
+    @Test
     public void getComplaint_isCorrect(){
         boolean expected = true;
         boolean actual;
@@ -25,7 +26,7 @@ public class ExampleUnitTest {
         actual = testComplaint.getComplaint() != null;
         assertEquals(expected, actual);
     }
-
+    @Test
     public void getCookName_isCorrect(){
         ChefAccount testChef = new ChefAccount("test","name1","test","test","test","test","test");
         Complaint testComplaint = new Complaint("test",testChef);
@@ -35,6 +36,7 @@ public class ExampleUnitTest {
         assertEquals(expected,actual);
     }
 
+    @Test
     public void getCreditCardNum_isCorrect(){
         CreditCard testCard = new CreditCard("test",12345678,"test",100);
         long expected = 12345678;
@@ -43,6 +45,7 @@ public class ExampleUnitTest {
         assertEquals(expected,actual);
     }
 
+    @Test
     public void getCreditCardCCV_isCorrect(){
         CreditCard testCard = new CreditCard("test",12345678,"test",100);
         int expected = 100;
@@ -50,7 +53,5 @@ public class ExampleUnitTest {
 
         assertEquals(expected,actual);
     }
-
-
 
 }
