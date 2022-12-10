@@ -5,10 +5,10 @@ public class Demand {
 
     private ChefAccount _cook;
     private UserAccount _client;
-    private MenuItem _item;
+    private Meal _item;
     private boolean approved;
 
-    public Demand(ChefAccount cook, UserAccount client, MenuItem item){
+    public Demand(ChefAccount cook, UserAccount client, Meal item){
         this._cook = cook;
         this._client = client;
         this._item = item;
@@ -39,10 +39,10 @@ public class Demand {
         this._client = client;
     }
 
-    public MenuItem get_item(){
+    public Meal get_item(){
         return _item;
     }
-    public void set_item(MenuItem item) {
+    public void set_item(Meal item) {
         this._item = item;
     }
 }
