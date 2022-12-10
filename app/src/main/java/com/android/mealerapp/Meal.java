@@ -18,6 +18,7 @@ public class Meal {
         this.cook = cook;
     }
 
+
     public ChefAccount getCook() {return cook;}
 
     public void setCook(ChefAccount cook) {this.cook = cook;}
