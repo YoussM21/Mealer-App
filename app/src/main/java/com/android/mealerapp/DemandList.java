@@ -31,7 +31,7 @@ public class DemandList extends ArrayAdapter<Demand> {
 
         Demand demand = demands.get(position);
         textViewName.setText(demand.getCookName());
-        textViewDescription.setText(demand.get_item().getMeal());
+        textViewDescription.setText(demand.get_item().get_mealName());
         return listViewItem;
     }
 }
