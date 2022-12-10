@@ -7,31 +7,21 @@
     android:background="#5B8CA3"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+
+    <ImageView
+        android:id="@+id/logo4"
+        android:layout_width="167dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="668dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:background="?attr/colorPrimary">
-
-        <SearchView
-            android:id="@+id/search_Meal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            app:queryHint="Search for a meal..." />
-    </RelativeLayout>
+        app:srcCompat="@drawable/logo2"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/rectangle8"
@@ -60,12 +50,12 @@
 
     <ImageView
         android:id="@+id/rectangle10"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="297dp"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="578dp"
+        android:layout_width="92dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="580dp"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,19 +63,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rectangle2" />
 
+    <RelativeLayout
+        android:layout_width="333dp"
+        android:layout_height="614dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="75dp"
+        android:background="@color/cardview_shadow_end_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/search_Meal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_shadow_end_color"
+            app:queryHint="Search for a meal..." />
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/identification3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="299dp"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="306dp"
         android:layout_marginTop="23dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="661dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="664dp"
         android:fontFamily="@font/jomhuria"
         android:text="Client"
         android:textColor="#FFEB3B"
         android:textSize="30sp"
-        android:translationY="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,22 +114,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/male_silhouette" />
-
-    <ImageView
-        android:id="@+id/logo4"
-        android:layout_width="167dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="244dp"
-        android:layout_marginBottom="668dp"
-        android:translationY="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo2"
-        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/bottom_line2"
