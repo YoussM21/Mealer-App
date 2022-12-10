@@ -66,7 +66,7 @@ public class CookWelcomePage extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Meal meal = meals.get(i);
-                showUpdateDeleteDialog(meal.getId(), meal.get_mealName());
+                showUpdateDeleteDialog(meal, meal.get_mealName());
                 return true;
             }
         });
@@ -117,7 +117,7 @@ public class CookWelcomePage extends AppCompatActivity {
         startActivity(intent1);
     }
 
-    private void showUpdateDeleteDialog(final String MealID, String MealName) {
+    private void showUpdateDeleteDialog(final Meal meal, String MealName) {
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
@@ -149,7 +149,10 @@ public class CookWelcomePage extends AppCompatActivity {
                 String name = editTextName.getText().toString().trim();
                 String description = editTextDescription.getText().toString().trim();
                 if (!TextUtils.isEmpty(name)) {
-                    updateMeal(MealID, name, description, recommend[0]);
+                    meal.set_mealName(name);
+                    meal.setDescription(description);
+                    meal.set_recommend(recommend[0]);
+                    updateMeal(meal);
                     b.dismiss();
                 }
             }
@@ -157,30 +160,19 @@ public class CookWelcomePage extends AppCompatActivity {
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                deleteMeal(MealID);
+                deleteMeal(meal.getId());
                 b.dismiss();
             }
         });
     }
 
 
-    private void updateMeal(final String id, final String name, final String description, final boolean recommend) {
+    private void updateMeal(final Meal meal) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Meals").child(id);
-                for (Meal m : meals) {
-                    if (m.getId().equals(id)){
-                        ChefAccount cook = m.getCook();
-
-                        Meal meal = new Meal(cook, name, description);
-                        meal.set_recommend(recommend);
-                        meal.setId(id);
-                        dR.setValue(meal);
-
-                        Toast.makeText(getApplicationContext(), "Meal Updated", Toast.LENGTH_LONG).show();
-                    }
-                }
+                DatabaseReference dR = FirebaseDatabase.getInstance().getReference("Meals").child(meal.getId());
+                dR.setValue(meal);
             }
         });
 

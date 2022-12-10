@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class MenuItemTest {
+public class MealTest {
 
     @Test
     public void getMeal_isCorrect(){
