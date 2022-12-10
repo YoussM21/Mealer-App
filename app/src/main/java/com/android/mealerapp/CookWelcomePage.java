@@ -100,7 +100,7 @@ public class CookWelcomePage extends AppCompatActivity {
     }
 
     public void onCartClick(View view){
-        Intent intent3 = new Intent(getApplicationContext(), MyBag.class);
+        Intent intent3 = new Intent(getApplicationContext(), cookOrdersPage.class);
         startActivity(intent3);
     }
 
