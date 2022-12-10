@@ -101,6 +101,18 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+        <activity
+            android:name=".cookOrdersPage"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        <activity
+            android:name=".MyBag"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
     </application>
 
